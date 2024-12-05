@@ -9,7 +9,7 @@ OpenGLWidget::OpenGLWidget() {
     //QColor rosaCuerpo(255, 188, 191);
     objeto3D=new Objeto3D();
     Superficie* s=new Superficie(1,0,0);
-    float x1 = 510, x2 = 460, y1 = 420, y2 = 321, z1 = 390, z2 = 340, z5 = 1, z6 = 0.9;
+    float x1 = 510, x2 = 460, y1 = 420, y2 = 321, z1 = 390, z2 = 340, z5 = 0.975, z6 = 0.9;
     float x3 = 0.4, x4 = 0.6, y3= 0.6, y4 = 0.8;
 
 
@@ -28,10 +28,10 @@ OpenGLWidget::OpenGLWidget() {
 
     //cara derecha
     s = new Superficie(1,0,0);
-    s->agregar(new Vertice(x3, y4, z5));
-    s->agregar(new Vertice(x3, y4, z6));
-    s->agregar(new Vertice(x3, y3, z6));
-    s->agregar(new Vertice(x3, y3, z5));
+    s->agregar(new Vertice(x4, y3, z5));
+    s->agregar(new Vertice(x4, y3, z6));
+    s->agregar(new Vertice(x4, y4, z6));
+    s->agregar(new Vertice(x4, y4, z5));
     objeto3D->agregar(s);
     // objeto3D->agregarCabeza(s);
 
@@ -48,30 +48,30 @@ OpenGLWidget::OpenGLWidget() {
 
     //cara izquierda
     s = new Superficie(1,0,0);
-    s->agregar(new Vertice(x4, y4, z5));
-    s->agregar(new Vertice(x4, y4, z6));
-    s->agregar(new Vertice(x4, y3, z6));
-    s->agregar(new Vertice(x4, y3, z5));
+    s->agregar(new Vertice(x3, y3, z6));
+    s->agregar(new Vertice(x3, y3, z5));
+    s->agregar(new Vertice(x3, y4, z5));
+    s->agregar(new Vertice(x3, y4, z6));
     objeto3D->agregar(s);
     // objeto3D->agregarCabeza(s);
 
 
     //cara superior
     s = new Superficie(1,0,0);
-    s->agregar(new Vertice(x4, y3, z6));
     s->agregar(new Vertice(x3, y3, z6));
-    s->agregar(new Vertice(x3, y3, z5));
+    s->agregar(new Vertice(x4, y3, z6));
     s->agregar(new Vertice(x4, y3, z5));
+    s->agregar(new Vertice(x3, y3, z5));
     objeto3D->agregar(s);
     // objeto3D->agregarCabeza(s);
 
 
     //cara inferior
     s = new Superficie(1,0,0);
+    s->agregar(new Vertice(x3, y4, z6));
     s->agregar(new Vertice(x4, y4, z6));
     s->agregar(new Vertice(x4, y4, z5));
     s->agregar(new Vertice(x3, y4, z5));
-    s->agregar(new Vertice(x3, y4, z6));
     objeto3D->agregar(s);
     // objeto3D->agregarCabeza(s);
 
@@ -449,10 +449,10 @@ OpenGLWidget::OpenGLWidget() {
     //En X 0.1 y termina en 1
     // EN Y en 0.75 y termina en 0.2
     s = new Superficie(1,0,0);// X    Y    Z
-    s->agregar(new Vertice(0.1, 0.2,0.5 ));
-    s->agregar(new Vertice(0.1, 0.2, -0.2));
-    s->agregar(new Vertice(0.1, 0.75, -0.2));
-    s->agregar(new Vertice(0.1, 0.75, 0.5));
+    s->agregar(new Vertice(0.8, 0.2, 0.5 ));
+    s->agregar(new Vertice(0.8, 0.2, -0.2));
+    s->agregar(new Vertice(0.8, 0.75, -0.2));
+    s->agregar(new Vertice(0.8, 0.75, 0.5));
     objeto3D->agregar(s);
 
     //parte de enfrente
@@ -465,34 +465,34 @@ OpenGLWidget::OpenGLWidget() {
 
     //parte de atrás
     s = new Superficie(1,0,0);// X    Y    Z
-    s->agregar(new Vertice(0.1, 0.2, -0.2));
-    s->agregar(new Vertice(0.8, 0.2, -0.2));
-    s->agregar(new Vertice(0.8, 0.75, -0.2));
     s->agregar(new Vertice(0.1, 0.75, -0.2));
+    s->agregar(new Vertice(0.8, 0.75, -0.2));
+    s->agregar(new Vertice(0.8, 0.2, -0.2));
+    s->agregar(new Vertice(0.1, 0.2, -0.2));
     objeto3D->agregar(s);
 
     //lado izquierdo
     s = new Superficie(1,0,0);// X    Y    Z
-    s->agregar(new Vertice(0.1, 0.2, 0.5));
     s->agregar(new Vertice(0.1, 0.2, -0.2));
-    s->agregar(new Vertice(0.1, 0.75, -0.2));
+    s->agregar(new Vertice(0.1, 0.2, 0.5));
     s->agregar(new Vertice(0.1, 0.75, 0.5));
+    s->agregar(new Vertice(0.1, 0.75, -0.2));
     objeto3D->agregar(s);
 
     //parte de arriba
-    s = new Superficie(1,0,0);// X    Y    Z
-    s->agregar(new Vertice(0.1, 0.2, 0.5));
-    s->agregar(new Vertice(0.8, 0.2, 0.5));
-    s->agregar(new Vertice(0.8, 0.2, -0.2));
-    s->agregar(new Vertice(0.1, 0.2, -0.2));
-    objeto3D->agregar(s);
-
-    //parte de abajo
     s = new Superficie(1,0,0);// X    Y    Z
     s->agregar(new Vertice(0.1, 0.75, 0.5));
     s->agregar(new Vertice(0.8, 0.75, 0.5));
     s->agregar(new Vertice(0.8, 0.75, -0.2));
     s->agregar(new Vertice(0.1, 0.75, -0.2));
+    objeto3D->agregar(s);
+
+    //parte de abajo
+    s = new Superficie(1,0,0);// X    Y    Z
+    s->agregar(new Vertice(0.1, 0.2, -0.2));
+    s->agregar(new Vertice(0.8, 0.2, -0.2));
+    s->agregar(new Vertice(0.8, 0.2, 0.5));
+    s->agregar(new Vertice(0.1, 0.2, 0.5));
     objeto3D->agregar(s);
 }
 
