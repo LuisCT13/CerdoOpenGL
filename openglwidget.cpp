@@ -376,7 +376,7 @@ void OpenGLWidget::paintGL() {
     glFrustum(-1.0,1.0,-1.0,1.0,2.0,10.0);
     glMatrixMode(GL_MODELVIEW);
 
-    QSize tam=size();
+    QSize tam = size();
     //glViewport(tam.width()/2,tam.height()/2,tam.width()/2,tam.height()/2);
     Cabeza *cabeza1 = new Cabeza();
     Torso *torso1 = new Torso();
