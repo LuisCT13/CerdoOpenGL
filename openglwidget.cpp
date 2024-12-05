@@ -550,7 +550,7 @@ void OpenGLWidget::paintGL() {
     glLightfv(GL_LIGHT0, GL_LINEAR_ATTENUATION, luz_aten);
 
     glNormal3f(0, 0, 1);
-    glColor3f(1, 0, 0);
+    glColor3f(1.0f, 0.75f, 0.75f);
 
     glTranslatef(0.25, 0.25, -3.5);
     glRotated(angulo, 0, 1, 0);
