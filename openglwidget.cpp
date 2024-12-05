@@ -1,4 +1,6 @@
 #include "openglwidget.h"
+#include "cabeza.h"
+#include "torso.h"
 
 OpenGLWidget::OpenGLWidget() {
     angulo=15;
@@ -11,139 +13,6 @@ OpenGLWidget::OpenGLWidget() {
     Superficie* s=new Superficie(1,0,0);
     float x1 = 510, x2 = 460, y1 = 420, y2 = 321, z1 = 390, z2 = 340, z5 = 0.975, z6 = 0.9;
     float x3 = 0.4, x4 = 0.6, y3= 0.6, y4 = 0.8;
-
-
-
-    // ---- NARIZ DEL CERDO ----
-
-    //frente
-    s->agregar(new Vertice(x4,y4,z5));
-    s->agregar(new Vertice(x3,y4,z5));
-    s->agregar(new Vertice(x3,y3,z5));
-    s->agregar(new Vertice(x4,y3,z5));
-    objeto3D->agregar(s);
-    // objeto3D->agregarCabeza(s);
-
-
-
-    //cara derecha
-    s = new Superficie(1,0,0);
-    s->agregar(new Vertice(x4, y3, z5));
-    s->agregar(new Vertice(x4, y3, z6));
-    s->agregar(new Vertice(x4, y4, z6));
-    s->agregar(new Vertice(x4, y4, z5));
-    objeto3D->agregar(s);
-    // objeto3D->agregarCabeza(s);
-
-
-    //cara trasera
-    s = new Superficie(1,0,0);
-    s->agregar(new Vertice(x4,y4,z6));
-    s->agregar(new Vertice(x3,y4,z6));
-    s->agregar(new Vertice(x3,y3,z6));
-    s->agregar(new Vertice(x4,y3,z6));
-    objeto3D->agregar(s);
-    // objeto3D->agregarCabeza(s);
-
-
-    //cara izquierda
-    s = new Superficie(1,0,0);
-    s->agregar(new Vertice(x3, y3, z6));
-    s->agregar(new Vertice(x3, y3, z5));
-    s->agregar(new Vertice(x3, y4, z5));
-    s->agregar(new Vertice(x3, y4, z6));
-    objeto3D->agregar(s);
-    // objeto3D->agregarCabeza(s);
-
-
-    //cara superior
-    s = new Superficie(1,0,0);
-    s->agregar(new Vertice(x3, y3, z6));
-    s->agregar(new Vertice(x4, y3, z6));
-    s->agregar(new Vertice(x4, y3, z5));
-    s->agregar(new Vertice(x3, y3, z5));
-    objeto3D->agregar(s);
-    // objeto3D->agregarCabeza(s);
-
-
-    //cara inferior
-    s = new Superficie(1,0,0);
-    s->agregar(new Vertice(x3, y4, z6));
-    s->agregar(new Vertice(x4, y4, z6));
-    s->agregar(new Vertice(x4, y4, z5));
-    s->agregar(new Vertice(x3, y4, z5));
-    objeto3D->agregar(s);
-    // objeto3D->agregarCabeza(s);
-
-
-
-
-
-
-
-    // ---- CABEZA DEL CERDO ----
-    //y menor 0.5 y y mayor de 1
-    // la x menor va a ser de 0.2 a 0.7
-    //cara principal
-    s = new Superficie(1,0,0);
-    s->agregar(new Vertice( 0.2,0.5,0.9));
-    s->agregar(new Vertice( 0.7,0.5,0.9));
-    s->agregar(new Vertice( 0.7,1,0.9));
-    s->agregar(new Vertice( 0.2,1,0.9));
-    objeto3D->agregar(s);
-    // objeto3D->agregarCabeza(s);
-
-
-    //cara derecha
-    s = new Superficie(1,0,0);
-    s->agregar(new Vertice( 0.7, 0.5, 0.9));
-    s->agregar(new Vertice( 0.7, 0.5, 0.5));
-    s->agregar(new Vertice( 0.7, 1,  0.5));
-    s->agregar(new Vertice( 0.7, 1, 0.9));
-    objeto3D->agregar(s);
-    // objeto3D->agregarCabeza(s);
-
-
-    //cara trasera
-    s = new Superficie(1,0,0);
-    s->agregar(new Vertice( 0.7, 0.5,  0.5));
-    s->agregar(new Vertice( 0.2, 0.5,  0.5));
-    s->agregar(new Vertice( 0.2, 1, 0.5));
-    s->agregar(new Vertice( 0.7, 1, 0.5));
-    objeto3D->agregar(s);
-    // objeto3D->agregarCabeza(s);
-
-
-    //cara izquierda
-    s = new Superficie(1,0,0);
-    s->agregar(new Vertice( 0.2, 0.5,  0.5));
-    s->agregar(new Vertice( 0.2, 0.5, 0.9));
-    s->agregar(new Vertice( 0.2, 1, 0.9));
-    s->agregar(new Vertice( 0.2, 1,  0.5));
-    objeto3D->agregar(s);
-    // objeto3D->agregarCabeza(s);
-
-
-    //cara superior
-    s = new Superficie(1,0,0);
-    s->agregar(new Vertice( 0.2, 1, 0.9));
-    s->agregar(new Vertice( 0.7, 1, 0.9));
-    s->agregar(new Vertice( 0.7, 1, 0.5));
-    s->agregar(new Vertice( 0.2, 1, 0.5));
-    objeto3D->agregar(s);
-    // objeto3D->agregarCabeza(s);
-
-
-    //cara inferior
-    s = new Superficie(1,0,0);
-    s->agregar(new Vertice( 0.2, 0.5, 0.9));
-    s->agregar(new Vertice( 0.2, 0.5,  0.5));
-    s->agregar(new Vertice( 0.7, 0.5,  0.5));
-    s->agregar(new Vertice( 0.7, 0.5, 0.9));
-    objeto3D->agregar(s);
-    // objeto3D->agregarCabeza(s);
-
-
 
 
     // ---- PATA SUPERIOR IZQUIERDA ----
@@ -439,61 +308,6 @@ OpenGLWidget::OpenGLWidget() {
     objeto3D->agregar(s);
     // objeto3D->agregarPataSupDer(s);
     //objeto3D->agregarPatas(s);
-
-
-
-
-    // ---- CUERPO DEL CERDO ----
-    //lado derecho
-    //En z comeinza en 0.5 y termina el -0.2
-    //En X 0.1 y termina en 1
-    // EN Y en 0.75 y termina en 0.2
-    s = new Superficie(1,0,0);// X    Y    Z
-    s->agregar(new Vertice(0.8, 0.2, 0.5 ));
-    s->agregar(new Vertice(0.8, 0.2, -0.2));
-    s->agregar(new Vertice(0.8, 0.75, -0.2));
-    s->agregar(new Vertice(0.8, 0.75, 0.5));
-    objeto3D->agregar(s);
-
-    //parte de enfrente
-    s = new Superficie(1,0,0);// X    Y    Z
-    s->agregar(new Vertice(0.1, 0.2, 0.5));
-    s->agregar(new Vertice(0.8, 0.2, 0.5));
-    s->agregar(new Vertice(0.8, 0.75, 0.5));
-    s->agregar(new Vertice(0.1, 0.75, 0.5));
-    objeto3D->agregar(s);
-
-    //parte de atrás
-    s = new Superficie(1,0,0);// X    Y    Z
-    s->agregar(new Vertice(0.1, 0.75, -0.2));
-    s->agregar(new Vertice(0.8, 0.75, -0.2));
-    s->agregar(new Vertice(0.8, 0.2, -0.2));
-    s->agregar(new Vertice(0.1, 0.2, -0.2));
-    objeto3D->agregar(s);
-
-    //lado izquierdo
-    s = new Superficie(1,0,0);// X    Y    Z
-    s->agregar(new Vertice(0.1, 0.2, -0.2));
-    s->agregar(new Vertice(0.1, 0.2, 0.5));
-    s->agregar(new Vertice(0.1, 0.75, 0.5));
-    s->agregar(new Vertice(0.1, 0.75, -0.2));
-    objeto3D->agregar(s);
-
-    //parte de arriba
-    s = new Superficie(1,0,0);// X    Y    Z
-    s->agregar(new Vertice(0.1, 0.75, 0.5));
-    s->agregar(new Vertice(0.8, 0.75, 0.5));
-    s->agregar(new Vertice(0.8, 0.75, -0.2));
-    s->agregar(new Vertice(0.1, 0.75, -0.2));
-    objeto3D->agregar(s);
-
-    //parte de abajo
-    s = new Superficie(1,0,0);// X    Y    Z
-    s->agregar(new Vertice(0.1, 0.2, -0.2));
-    s->agregar(new Vertice(0.8, 0.2, -0.2));
-    s->agregar(new Vertice(0.8, 0.2, 0.5));
-    s->agregar(new Vertice(0.1, 0.2, 0.5));
-    objeto3D->agregar(s);
 }
 
 void OpenGLWidget::initializeGL() {
@@ -550,7 +364,7 @@ void OpenGLWidget::paintGL() {
     glLightfv(GL_LIGHT0, GL_LINEAR_ATTENUATION, luz_aten);
 
     glNormal3f(0, 0, 1);
-    glColor3f(1.0f, 0.75f, 0.75f);
+    glColor3f(1.2f, 0.75f, 0.75f);
 
     glTranslatef(0.25, 0.25, -3.5);
     glRotated(angulo, 0, 1, 0);
@@ -564,12 +378,16 @@ void OpenGLWidget::paintGL() {
 
     QSize tam=size();
     //glViewport(tam.width()/2,tam.height()/2,tam.width()/2,tam.height()/2);
+    Cabeza *cabeza1 = new Cabeza();
+    Torso *torso1 = new Torso();
+    cabeza1->desplegar();
+    torso1->desplegar();
 
-    objeto3D->desplegar();
+    //objeto3D->desplegar();
 
-    Objeto3D* copia=objeto3D->copia();
-    copia->transformar(new Matriz3D(1,0,0,1,0,1,0,0,0,0,1,0));
-    float ang=(angulo*5*3.14159)/180.0;
-    copia->rotar(ang,new Linea(1.25,0.25,0.0,1.25,0.25,-0.5));
+    //Objeto3D* copia=objeto3D->copia();
+    //copia->transformar(new Matriz3D(1,0,0,1,0,1,0,0,0,0,1,0));
+    //float ang=(angulo*5*3.14159)/180.0;
+    // copia->rotar(ang,new Linea(1.25,0.25,0.0,1.25,0.25,-0.5));
     //copia->desplegar();
 }

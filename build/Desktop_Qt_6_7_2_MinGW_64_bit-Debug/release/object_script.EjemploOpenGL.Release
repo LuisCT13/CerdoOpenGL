@@ -1,0 +1,11 @@
+release/cabeza.o
+release/linea.o
+release/main.o
+release/mainwindow.o
+release/matriz3d.o
+release/objeto3d.o
+release/openglwidget.o
+release/superficie.o
+release/torso.o
+release/vertice.o
+release/moc_mainwindow.o
