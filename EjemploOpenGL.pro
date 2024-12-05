@@ -17,6 +17,7 @@ SOURCES += \
     matriz3d.cpp \
     objeto3d.cpp \
     openglwidget.cpp \
+    pata.cpp \
     superficie.cpp \
     vertice.cpp
 
@@ -26,6 +27,7 @@ HEADERS += \
     matriz3d.h \
     objeto3d.h \
     openglwidget.h \
+    pata.h \
     superficie.h \
     vertice.h
 
