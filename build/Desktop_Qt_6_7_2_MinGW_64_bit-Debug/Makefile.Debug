@@ -51,6 +51,7 @@ OBJECTS_DIR   = debug
 ####### Files
 
 SOURCES       = ..\..\cabeza.cpp \
+		..\..\cerdo.cpp \
 		..\..\linea.cpp \
 		..\..\main.cpp \
 		..\..\mainwindow.cpp \
@@ -61,6 +62,7 @@ SOURCES       = ..\..\cabeza.cpp \
 		..\..\torso.cpp \
 		..\..\vertice.cpp debug\moc_mainwindow.cpp
 OBJECTS       = debug/cabeza.o \
+		debug/cerdo.o \
 		debug/linea.o \
 		debug/main.o \
 		debug/mainwindow.o \
@@ -73,6 +75,7 @@ OBJECTS       = debug/cabeza.o \
 		debug/moc_mainwindow.o
 
 DIST          =  ..\..\cabeza.h \
+		..\..\cerdo.h \
 		..\..\linea.h \
 		..\..\mainwindow.h \
 		..\..\matriz3d.h \
@@ -81,6 +84,7 @@ DIST          =  ..\..\cabeza.h \
 		..\..\superficie.h \
 		..\..\torso.h \
 		..\..\vertice.h ..\..\cabeza.cpp \
+		..\..\cerdo.cpp \
 		..\..\linea.cpp \
 		..\..\main.cpp \
 		..\..\mainwindow.cpp \
@@ -109,10 +113,10 @@ qmake: FORCE
 qmake_all: FORCE
 
 dist:
-	$(ZIP) EjemploOpenGL.zip $(SOURCES) $(DIST) ..\..\..\..\EjemploOpenGL.pro D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\features\spec_pre.prf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\features\device_config.prf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\common\sanitize.conf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\common\gcc-base.conf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\common\g++-base.conf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\features\win32\windows_vulkan_sdk.prf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\common\windows-vulkan.conf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\common\g++-win32.conf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\common\windows-desktop.conf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\qconfig.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_ext_freetype.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_ext_libjpeg.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_ext_libpng.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_charts.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_charts_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_chartsqml.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_chartsqml_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_concurrent.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_concurrent_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_core.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_core_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_dbus.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_dbus_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_designer.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_designer_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_designercomponents_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_devicediscovery_support_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_entrypoint_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_example_icons_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_fb_support_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_freetype_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_gui.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_gui_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_harfbuzz_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_help.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_help_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_jpeg_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_labsanimation.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_labsanimation_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_labsfolderlistmodel.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_labsfolderlistmodel_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_labsqmlmodels.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_labsqmlmodels_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_labssettings.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_labssettings_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_labssharedimage.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_labssharedimage_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_labswavefrontmesh.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_labswavefrontmesh_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_linguist.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_multimedia.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_multimedia_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_multimediaquick_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_multimediawidgets.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_multimediawidgets_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_network.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_network_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_opengl.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_opengl_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_openglwidgets.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_openglwidgets_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_packetprotocol_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_png_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_printsupport.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_printsupport_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_qdoccatch_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_qdoccatchconversions_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_qdoccatchgenerators_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_qml.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_qml_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_qmlbuiltins.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_qmlbuiltins_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_qmlcompiler.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_qmlcompiler_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_qmlcore.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_qmlcore_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_qmldebug_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_qmldom_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_qmlintegration.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_qmlintegration_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_qmllocalstorage.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_qmllocalstorage_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_qmlls_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_qmlmodels.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_qmlmodels_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_qmlnetwork.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_qmlnetwork_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_qmltest.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_qmltest_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_qmltoolingsettings_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_qmltyperegistrar_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_qmlworkerscript.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_qmlworkerscript_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_qmlxmllistmodel.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_qmlxmllistmodel_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quick.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quick3d.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quick3d_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quick3dassetimport.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quick3dassetimport_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quick3dassetutils.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quick3dassetutils_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quick3deffects.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quick3deffects_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quick3dglslparser_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quick3dhelpers.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quick3dhelpers_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quick3dhelpersimpl.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quick3dhelpersimpl_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quick3diblbaker.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quick3diblbaker_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quick3dparticleeffects.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quick3dparticleeffects_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quick3dparticles.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quick3dparticles_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quick3druntimerender.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quick3druntimerender_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quick3dspatialaudio_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quick3dutils.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quick3dutils_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quick_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickcontrols2.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickcontrols2_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickcontrols2basic.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickcontrols2basic_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickcontrols2basicstyleimpl.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickcontrols2basicstyleimpl_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickcontrols2fusion.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickcontrols2fusion_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickcontrols2fusionstyleimpl.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickcontrols2fusionstyleimpl_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickcontrols2imagine.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickcontrols2imagine_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickcontrols2imaginestyleimpl.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickcontrols2imaginestyleimpl_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickcontrols2impl.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickcontrols2impl_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickcontrols2material.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickcontrols2material_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickcontrols2materialstyleimpl.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickcontrols2materialstyleimpl_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickcontrols2universal.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickcontrols2universal_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickcontrols2universalstyleimpl.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickcontrols2universalstyleimpl_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickcontrols2windowsstyleimpl.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickcontrols2windowsstyleimpl_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickcontrolstestutilsprivate_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickdialogs2.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickdialogs2_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickdialogs2quickimpl.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickdialogs2quickimpl_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickdialogs2utils.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickdialogs2utils_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickeffects_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quicklayouts.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quicklayouts_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickparticles_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickshapes_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quicktemplates2.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quicktemplates2_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quicktestutilsprivate_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quicktimeline.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quicktimeline_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quicktimelineblendtrees.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quicktimelineblendtrees_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickwidgets.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickwidgets_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_shadertools.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_shadertools_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_spatialaudio.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_spatialaudio_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_sql.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_sql_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_svg.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_svg_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_svgwidgets.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_svgwidgets_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_testlib.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_testlib_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_tools_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_uiplugin.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_uitools.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_uitools_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_widgets.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_widgets_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_xml.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_xml_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_zlib_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\features\qt_functions.prf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\features\qt_config.prf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\win32-g++\qmake.conf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\features\spec_post.prf .qmake.stash D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\features\exclusive_builds.prf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\features\toolchain.prf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\features\default_pre.prf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\features\win32\default_pre.prf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\features\resolve_config.prf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\features\exclusive_builds_post.prf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\features\default_post.prf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\features\build_pass.prf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\features\qml_debug.prf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\features\precompile_header.prf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\features\warn_on.prf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\features\permissions.prf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\features\qt.prf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\features\resources_functions.prf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\features\resources.prf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\features\moc.prf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\features\win32\opengl.prf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\features\uic.prf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\features\qmake_use.prf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\features\file_copies.prf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\features\win32\windows.prf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\features\testcase_targets.prf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\features\exceptions.prf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\features\yacc.prf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\features\lex.prf ..\..\EjemploOpenGL.pro D:\DESCARGAS\QT-C++\6.7.2\mingw_64\lib\Qt6OpenGLWidgets.prl D:\DESCARGAS\QT-C++\6.7.2\mingw_64\lib\Qt6OpenGL.prl D:\DESCARGAS\QT-C++\6.7.2\mingw_64\lib\Qt6Widgets.prl D:\DESCARGAS\QT-C++\6.7.2\mingw_64\lib\Qt6Gui.prl D:\DESCARGAS\QT-C++\6.7.2\mingw_64\lib\Qt6Core.prl D:\DESCARGAS\QT-C++\6.7.2\mingw_64\lib\Qt6EntryPoint.prl    D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\features\data\dummy.cpp ..\..\cabeza.h ..\..\linea.h ..\..\mainwindow.h ..\..\matriz3d.h ..\..\objeto3d.h ..\..\openglwidget.h ..\..\superficie.h ..\..\torso.h ..\..\vertice.h  ..\..\cabeza.cpp ..\..\linea.cpp ..\..\main.cpp ..\..\mainwindow.cpp ..\..\matriz3d.cpp ..\..\objeto3d.cpp ..\..\openglwidget.cpp ..\..\superficie.cpp ..\..\torso.cpp ..\..\vertice.cpp ..\..\mainwindow.ui    
+	$(ZIP) EjemploOpenGL.zip $(SOURCES) $(DIST) ..\..\..\..\EjemploOpenGL.pro D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\features\spec_pre.prf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\features\device_config.prf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\common\sanitize.conf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\common\gcc-base.conf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\common\g++-base.conf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\features\win32\windows_vulkan_sdk.prf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\common\windows-vulkan.conf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\common\g++-win32.conf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\common\windows-desktop.conf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\qconfig.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_ext_freetype.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_ext_libjpeg.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_ext_libpng.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_charts.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_charts_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_chartsqml.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_chartsqml_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_concurrent.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_concurrent_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_core.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_core_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_dbus.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_dbus_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_designer.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_designer_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_designercomponents_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_devicediscovery_support_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_entrypoint_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_example_icons_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_fb_support_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_freetype_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_gui.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_gui_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_harfbuzz_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_help.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_help_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_jpeg_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_labsanimation.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_labsanimation_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_labsfolderlistmodel.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_labsfolderlistmodel_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_labsqmlmodels.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_labsqmlmodels_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_labssettings.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_labssettings_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_labssharedimage.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_labssharedimage_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_labswavefrontmesh.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_labswavefrontmesh_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_linguist.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_multimedia.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_multimedia_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_multimediaquick_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_multimediawidgets.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_multimediawidgets_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_network.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_network_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_opengl.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_opengl_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_openglwidgets.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_openglwidgets_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_packetprotocol_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_png_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_printsupport.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_printsupport_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_qdoccatch_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_qdoccatchconversions_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_qdoccatchgenerators_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_qml.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_qml_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_qmlbuiltins.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_qmlbuiltins_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_qmlcompiler.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_qmlcompiler_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_qmlcore.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_qmlcore_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_qmldebug_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_qmldom_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_qmlintegration.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_qmlintegration_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_qmllocalstorage.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_qmllocalstorage_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_qmlls_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_qmlmodels.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_qmlmodels_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_qmlnetwork.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_qmlnetwork_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_qmltest.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_qmltest_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_qmltoolingsettings_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_qmltyperegistrar_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_qmlworkerscript.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_qmlworkerscript_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_qmlxmllistmodel.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_qmlxmllistmodel_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quick.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quick3d.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quick3d_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quick3dassetimport.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quick3dassetimport_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quick3dassetutils.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quick3dassetutils_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quick3deffects.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quick3deffects_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quick3dglslparser_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quick3dhelpers.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quick3dhelpers_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quick3dhelpersimpl.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quick3dhelpersimpl_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quick3diblbaker.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quick3diblbaker_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quick3dparticleeffects.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quick3dparticleeffects_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quick3dparticles.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quick3dparticles_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quick3druntimerender.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quick3druntimerender_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quick3dspatialaudio_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quick3dutils.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quick3dutils_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quick_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickcontrols2.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickcontrols2_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickcontrols2basic.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickcontrols2basic_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickcontrols2basicstyleimpl.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickcontrols2basicstyleimpl_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickcontrols2fusion.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickcontrols2fusion_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickcontrols2fusionstyleimpl.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickcontrols2fusionstyleimpl_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickcontrols2imagine.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickcontrols2imagine_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickcontrols2imaginestyleimpl.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickcontrols2imaginestyleimpl_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickcontrols2impl.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickcontrols2impl_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickcontrols2material.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickcontrols2material_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickcontrols2materialstyleimpl.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickcontrols2materialstyleimpl_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickcontrols2universal.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickcontrols2universal_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickcontrols2universalstyleimpl.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickcontrols2universalstyleimpl_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickcontrols2windowsstyleimpl.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickcontrols2windowsstyleimpl_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickcontrolstestutilsprivate_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickdialogs2.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickdialogs2_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickdialogs2quickimpl.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickdialogs2quickimpl_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickdialogs2utils.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickdialogs2utils_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickeffects_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quicklayouts.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quicklayouts_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickparticles_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickshapes_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quicktemplates2.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quicktemplates2_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quicktestutilsprivate_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quicktimeline.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quicktimeline_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quicktimelineblendtrees.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quicktimelineblendtrees_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickwidgets.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_quickwidgets_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_shadertools.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_shadertools_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_spatialaudio.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_spatialaudio_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_sql.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_sql_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_svg.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_svg_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_svgwidgets.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_svgwidgets_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_testlib.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_testlib_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_tools_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_uiplugin.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_uitools.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_uitools_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_widgets.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_widgets_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_xml.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_xml_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\modules\qt_lib_zlib_private.pri D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\features\qt_functions.prf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\features\qt_config.prf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\win32-g++\qmake.conf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\features\spec_post.prf .qmake.stash D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\features\exclusive_builds.prf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\features\toolchain.prf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\features\default_pre.prf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\features\win32\default_pre.prf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\features\resolve_config.prf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\features\exclusive_builds_post.prf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\features\default_post.prf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\features\build_pass.prf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\features\qml_debug.prf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\features\precompile_header.prf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\features\warn_on.prf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\features\permissions.prf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\features\qt.prf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\features\resources_functions.prf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\features\resources.prf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\features\moc.prf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\features\win32\opengl.prf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\features\uic.prf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\features\qmake_use.prf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\features\file_copies.prf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\features\win32\windows.prf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\features\testcase_targets.prf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\features\exceptions.prf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\features\yacc.prf D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\features\lex.prf ..\..\EjemploOpenGL.pro D:\DESCARGAS\QT-C++\6.7.2\mingw_64\lib\Qt6OpenGLWidgets.prl D:\DESCARGAS\QT-C++\6.7.2\mingw_64\lib\Qt6OpenGL.prl D:\DESCARGAS\QT-C++\6.7.2\mingw_64\lib\Qt6Widgets.prl D:\DESCARGAS\QT-C++\6.7.2\mingw_64\lib\Qt6Gui.prl D:\DESCARGAS\QT-C++\6.7.2\mingw_64\lib\Qt6Core.prl D:\DESCARGAS\QT-C++\6.7.2\mingw_64\lib\Qt6EntryPoint.prl    D:\DESCARGAS\QT-C++\6.7.2\mingw_64\mkspecs\features\data\dummy.cpp ..\..\cabeza.h ..\..\cerdo.h ..\..\linea.h ..\..\mainwindow.h ..\..\matriz3d.h ..\..\objeto3d.h ..\..\openglwidget.h ..\..\superficie.h ..\..\torso.h ..\..\vertice.h  ..\..\cabeza.cpp ..\..\cerdo.cpp ..\..\linea.cpp ..\..\main.cpp ..\..\mainwindow.cpp ..\..\matriz3d.cpp ..\..\objeto3d.cpp ..\..\openglwidget.cpp ..\..\superficie.cpp ..\..\torso.cpp ..\..\vertice.cpp ..\..\mainwindow.ui    
 
 clean: compiler_clean 
-	-$(DEL_FILE) debug\cabeza.o debug\linea.o debug\main.o debug\mainwindow.o debug\matriz3d.o debug\objeto3d.o debug\openglwidget.o debug\superficie.o debug\torso.o debug\vertice.o debug\moc_mainwindow.o
+	-$(DEL_FILE) debug\cabeza.o debug\cerdo.o debug\linea.o debug\main.o debug\mainwindow.o debug\matriz3d.o debug\objeto3d.o debug\openglwidget.o debug\superficie.o debug\torso.o debug\vertice.o debug\moc_mainwindow.o
 
 distclean: clean 
 	-$(DEL_FILE) .qmake.stash
@@ -558,6 +562,211 @@ debug/cabeza.o: ../../cabeza.cpp ../../cabeza.h \
 		../../matriz3d.h \
 		../../linea.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\cabeza.o ..\..\cabeza.cpp
+
+debug/cerdo.o: ../../cerdo.cpp ../../cerdo.h \
+		../../cabeza.h \
+		../../objeto3d.h \
+		../../superficie.h \
+		../../vertice.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtOpenGLWidgets/QOpenGLWidget \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtOpenGLWidgets/qopenglwidget.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtOpenGLWidgets/qtopenglwidgetsglobal.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qglobal.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qtversionchecks.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qtconfiginclude.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qconfig.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qtcore-config.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qtconfigmacros.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qtcoreexports.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qcompilerdetection.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qprocessordetection.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qsystemdetection.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qtdeprecationmarkers.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qtpreprocessorsupport.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qassert.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qtnoop.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qtypes.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qtversion.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qtclasshelpermacros.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qtypeinfo.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qcontainerfwd.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qsysinfo.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qlogging.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qflags.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qcompare_impl.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qatomic.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qbasicatomic.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qatomic_cxx11.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qgenericatomic.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qyieldcpu.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qconstructormacros.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qdarwinhelpers.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qexceptionhandling.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qforeach.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qttypetraits.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qfunctionpointer.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qglobalstatic.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qmalloc.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qminmax.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qnumeric.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qoverload.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qswap.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qtenvironmentvariables.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qtresource.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qttranslation.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qversiontagging.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtOpenGLWidgets/qtopenglwidgetsexports.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtWidgets/QWidget \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtWidgets/qwidget.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtGui/qtguiglobal.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtGui/qtgui-config.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtGui/qtguiexports.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtWidgets/qtwidgets-config.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtWidgets/qtwidgetsexports.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtGui/qwindowdefs.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qobjectdefs.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qnamespace.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qtmetamacros.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qobjectdefs_impl.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qfunctionaltools_impl.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtGui/qwindowdefs_win.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qobject.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qstring.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qchar.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qstringview.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qbytearray.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qrefcount.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qarraydata.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qpair.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qarraydatapointer.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qarraydataops.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qcontainertools_impl.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qxptype_traits.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/q20functional.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/q20memory.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qbytearrayalgorithms.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qbytearrayview.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qstringfwd.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/q20type_traits.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qstringliteral.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qstringalgorithms.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qlatin1stringview.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qanystringview.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qutf8stringview.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qstringtokenizer.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qstringbuilder.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qstringconverter.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qstringconverter_base.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qlist.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qhashfunctions.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qiterator.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qbytearraylist.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qstringlist.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qalgorithms.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qstringmatcher.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qcoreevent.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qscopedpointer.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qmetatype.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qcompare.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qcomparehelpers.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qdatastream.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qiodevicebase.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qfloat16.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qmath.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qiterable.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qmetacontainer.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qcontainerinfo.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qtaggedpointer.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qscopeguard.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qobject_impl.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qbindingstorage.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qmargins.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/q23utility.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtGui/qaction.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtGui/qkeysequence.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtGui/qicon.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qsize.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtGui/qpixmap.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtGui/qpaintdevice.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qrect.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qpoint.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtGui/qcolor.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtGui/qrgb.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtGui/qrgba64.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qshareddata.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtGui/qimage.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtGui/qpixelformat.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtGui/qtransform.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtGui/qpolygon.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtGui/qregion.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qline.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qvariant.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qdebug.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qtextstream.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qcontiguouscache.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qsharedpointer.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qsharedpointer_impl.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qmap.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qshareddata_impl.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qset.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qhash.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qvarlengtharray.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtGui/qpalette.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtGui/qbrush.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtGui/qfont.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qendian.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtGui/qfontmetrics.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtGui/qfontinfo.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtWidgets/qsizepolicy.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtGui/qcursor.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtGui/qbitmap.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtGui/qevent.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qiodevice.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qurl.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtGui/qeventpoint.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtGui/qvector2d.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtGui/qvectornd.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtGui/qpointingdevice.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtGui/qinputdevice.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtGui/qscreen.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/QList \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/QObject \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/QRect \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/QSize \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/QSizeF \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtGui/QTransform \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qnativeinterface.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtGui/qscreen_platform.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtGui/qguiapplication.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qcoreapplication.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qdeadlinetimer.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qelapsedtimer.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qeventloop.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qcoreapplication_platform.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qfuture.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qfutureinterface.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qmutex.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qtsan_impl.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qresultstore.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qfuture_impl.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qthreadpool.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qthread.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qrunnable.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qexception.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qpromise.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtGui/qinputmethod.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qlocale.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtGui/qguiapplication_platform.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtGui/QSurfaceFormat \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtGui/qsurfaceformat.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtGui/qopengl.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtGui/qopenglext.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/qt_windows.h \
+		../../matriz3d.h \
+		../../linea.h \
+		../../torso.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\cerdo.o ..\..\cerdo.cpp
 
 debug/linea.o: ../../linea.cpp ../../linea.h \
 		../../vertice.h \
@@ -1586,7 +1795,8 @@ debug/openglwidget.o: ../../openglwidget.cpp ../../openglwidget.h \
 		../../matriz3d.h \
 		../../linea.h \
 		../../cabeza.h \
-		../../torso.h
+		../../torso.h \
+		../../cerdo.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\openglwidget.o ..\..\openglwidget.cpp
 
 debug/superficie.o: ../../superficie.cpp ../../superficie.h \

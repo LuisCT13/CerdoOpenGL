@@ -12,6 +12,7 @@ CONFIG += c++17
 
 SOURCES += \
     cabeza.cpp \
+    cerdo.cpp \
     linea.cpp \
     main.cpp \
     mainwindow.cpp \
@@ -24,6 +25,7 @@ SOURCES += \
 
 HEADERS += \
     cabeza.h \
+    cerdo.h \
     linea.h \
     mainwindow.h \
     matriz3d.h \

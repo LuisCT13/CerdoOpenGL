@@ -1,6 +1,7 @@
 #include "openglwidget.h"
 #include "cabeza.h"
 #include "torso.h"
+#include "cerdo.h"
 
 OpenGLWidget::OpenGLWidget() {
     angulo=15;
@@ -377,17 +378,7 @@ void OpenGLWidget::paintGL() {
     glMatrixMode(GL_MODELVIEW);
 
     QSize tam = size();
-    //glViewport(tam.width()/2,tam.height()/2,tam.width()/2,tam.height()/2);
-    Cabeza *cabeza1 = new Cabeza();
-    Torso *torso1 = new Torso();
-    cabeza1->desplegar();
-    torso1->desplegar();
-
-    //objeto3D->desplegar();
-
-    //Objeto3D* copia=objeto3D->copia();
-    //copia->transformar(new Matriz3D(1,0,0,1,0,1,0,0,0,0,1,0));
-    //float ang=(angulo*5*3.14159)/180.0;
-    // copia->rotar(ang,new Linea(1.25,0.25,0.0,1.25,0.25,-0.5));
-    //copia->desplegar();
+    Cerdo *cerdito = new Cerdo();
+    cerdito->desplegar();
 }
+

@@ -1,4 +1,5 @@
 release/cabeza.o
+release/cerdo.o
 release/linea.o
 release/main.o
 release/mainwindow.o
