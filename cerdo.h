@@ -10,6 +10,7 @@
 class Cerdo
 {
 public:
+
     Cerdo();
     Cerdo(Cabeza*, Torso*, Pata*, Pata*, Pata*, Pata*);
     Cabeza *cabezaCerdo;

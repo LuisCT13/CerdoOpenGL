@@ -15,6 +15,7 @@ public:
     char opcionesdeRotacion;
 
 private:
+    int cont;
     Cerdo *cerdito;
     Cerdo *inf;
     Cerdo *sup;

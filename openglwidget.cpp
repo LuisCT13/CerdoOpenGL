@@ -4,6 +4,7 @@
 #include "cerdo.h"
 
 OpenGLWidget::OpenGLWidget() {
+
     anguloX=15;
     anguloY=15;
     anguloZ=15;
@@ -12,29 +13,22 @@ OpenGLWidget::OpenGLWidget() {
     focoX = 0.0f;
     focoY = 1.0f;
     setMouseTracking(true);
-    //QColor rosaCuerpo(255, 188, 191);
-    objeto3D=new Objeto3D();
-    Superficie* s=new Superficie(1,0,0);
-    float x1 = 510, x2 = 460, y1 = 420, y2 = 321, z1 = 390, z2 = 340, z5 = 0.975, z6 = 0.9;
-    float x3 = 0.4, x4 = 0.6, y3= 0.6, y4 = 0.8;
     this->opcionesdeRotacion='x';
     cerdito = new Cerdo();
 
-    sup = cerdito->copia();
-    inf = cerdito->copia();
-    lat = cerdito->copia();
-
-
+     sup = cerdito->copia();
+     inf = cerdito->copia();
+     lat = cerdito->copia();
 }
 
 void OpenGLWidget::initializeGL() {
     glClearColor(1,1,1,0);
     //desplegarCopias();
-    update();
-
+    // update();
 }
 
 void OpenGLWidget::timerEvent(QTimerEvent *) {
+
     if(opcionesdeRotacion=='x'){
      cerdito->rotar((angulo/3.14)/180, 'x');
     }
@@ -44,11 +38,13 @@ void OpenGLWidget::timerEvent(QTimerEvent *) {
     else if(opcionesdeRotacion=='z'){
     cerdito->rotar((angulo/3.14)/180, 'z');
     }
+
     desplegarCopias();
     update();
 }
 
 void OpenGLWidget::mousePressEvent(QMouseEvent *e){
+
     timer.start(50, this);
     if(e->button() == Qt::RightButton){
         sentido = 1;
@@ -69,66 +65,64 @@ void OpenGLWidget::mouseMoveEvent(QMouseEvent *e) {
     focoY = 1.0f - (2.0f * e->position().y() / alto);
     update();
 }
-void OpenGLWidget::desplegarCopias( ) {
+void OpenGLWidget::desplegarCopias() {
+    // Eliminar las copias previas para evitar fugas de memoria
+    delete sup;
+    delete inf;
+    delete lat;
 
-
+    // Crear nuevas copias basadas en el estado actual del cerdito
     sup = cerdito->copia();
     inf = cerdito->copia();
     lat = cerdito->copia();
 
-    //Declaración de la Matriz de Escalado para Hcaer mas pequeñas las Vistas
-    float factorEscalado = 0.4; // Escala a la mitad del tamaño original
+    // Declaración de la matriz de escalado para hacer más pequeñas las vistas
+    float factorEscalado = 0.4; // Escala al 40% del tamaño original
     Matriz3D* matrizEscalado = new Matriz3D(factorEscalado, 0, 0, 0,
                                             0, factorEscalado, 0, 0,
                                             0, 0, factorEscalado, 0);
-    float factorEscalado2 = 0.7; // Escala a la mitad del tamaño original
-    Matriz3D* matrizEscaladoOrg = new Matriz3D(factorEscalado2, 0, 0, 0,
-                                            0, factorEscalado2, 0, 0,
-                                            0, 0, factorEscalado2, 0);
+
+    // Aplicar escalado a las copias
     sup->escalarPiezas(matrizEscalado);
     inf->escalarPiezas(matrizEscalado);
     lat->escalarPiezas(matrizEscalado);
-    //cerdito->escalarPiezas(matrizEscaladoOrg);
 
-    //Aplicar las Transformaciones para las vistas
-    //Superior
+    // Aplicar transformaciones específicas para cada copia
+    // Superior
     float angSup = 90.0 * M_PI / 180.0; // Convertir a radianes
     Matriz3D* matrizRotacionSup = new Matriz3D(1, 0, 0, 0,
                                                0, cos(angSup), -sin(angSup), 0,
                                                0, sin(angSup), cos(angSup), 0);
     sup->escalarPiezas(matrizRotacionSup);
-        //Inferior
-    float anguloInf = 90.0 * M_PI / -180.0; // Convertir a radianes
-    Matriz3D* matrizRotacionInf = new Matriz3D(1, 0, 0, 0,
-                                               0, cos(anguloInf), -sin(anguloInf), 0,
-                                               0, sin(anguloInf), cos(anguloInf), 0);
-    inf->escalarPiezas(matrizRotacionInf);
-        //lateral
-    float anguloLat = 90.0 * M_PI / -180.0; // Convertir a radianes
-    Matriz3D* matrizRotacionLateral = new Matriz3D(cos(anguloLat), 0, sin(anguloLat), 0,
-                                                   0, 1, 0, 0,
-                                                   -sin(anguloLat), 0, cos(anguloLat), 0);
-    lat->escalarPiezas(matrizRotacionLateral);
 
-    // //Traslación de las Copias
+    // Inferior
+    float angInf = -90.0 * M_PI / 180.0; // Convertir a radianes
+    Matriz3D* matrizRotacionInf = new Matriz3D(1, 0, 0, 0,
+                                               0, cos(angInf), -sin(angInf), 0,
+                                               0, sin(angInf), cos(angInf), 0);
+    inf->escalarPiezas(matrizRotacionInf);
+
+    // Lateral
+    float angLat = 90.0 * M_PI / 180.0; // Convertir a radianes
+    Matriz3D* matrizRotacionLat = new Matriz3D(cos(angLat), 0, sin(angLat), 0,
+                                               0, 1, 0, 0,
+                                               -sin(angLat), 0, cos(angLat), 0);
+    lat->escalarPiezas(matrizRotacionLat);
+
+    // Traslación de las copias
     sup->trasladar(-1.1, -0.8, 0);
     inf->trasladar(-0.3, -1, 0);
     lat->trasladar(1, -1, 0);
 
+    // Liberar memoria de las matrices creadas
     delete matrizEscalado;
-    delete matrizRotacionInf;
-    delete matrizRotacionLateral;
     delete matrizRotacionSup;
-
-     // inf->desplegar();
-     // lat->desplegar();
-     // sup->desplegar();
-
+    delete matrizRotacionInf;
+    delete matrizRotacionLat;
 }
 
-void OpenGLWidget::paintGL( ) {
 
-
+void OpenGLWidget::paintGL() {
     glEnable(GL_DEPTH_TEST);
     glEnable(GL_CULL_FACE);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -151,30 +145,39 @@ void OpenGLWidget::paintGL( ) {
     glNormal3f(0, 0, 1);
     glColor3f(1.2f, 0.75f, 0.75f);
 
-    //Rotacion de la figura
+    // Configuración de la cámara
     glTranslatef(0.25, 0.25, -3.5);
     glTranslatef(-0.25, -0.25, 0.25);
 
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
-    glFrustum(-1.0,1.0,-1.0,1.0,2.0,10.0);
+    glFrustum(-1.0, 1.0, -1.0, 1.0, 2.0, 10.0);
     glMatrixMode(GL_MODELVIEW);
 
+    // Dibujar la figura principal
+    glPushMatrix();
     cerdito->desplegar();
-    //glPushMatrix();
-    //desplegarCopias();
-    //glPopMatrix();
-    // glPushMatrix(); // Guardar el estado de la matriz
-    sup->desplegar(); // Dibujar la copia superior
-    // glPopMatrix(); // Restaurar el estado de la matriz
+    glPopMatrix();
 
-    // glPushMatrix(); // Guardar el estado de la matriz
-     inf->desplegar(); // Dibujar la copia inferior
-    // glPopMatrix(); // Restaurar el estado de la matriz
+    if (sup != nullptr) {
+        qDebug() << "Dibujando copia sup";
+        glPushMatrix();
+        sup->desplegar();
+        glPopMatrix();
+    }
 
-    // glPushMatrix(); // Guardar el estado de la matriz
-     lat->desplegar(); // Dibujar la copia lateral
-    // glPopMatrix(); // Restaurar el estado de la matriz
+    if (inf != nullptr) {
+        qDebug() << "Dibujando copia inf";
+        glPushMatrix();
+        inf->desplegar();
+        glPopMatrix();
+    }
 
+    if (lat != nullptr) {
+        qDebug() << "Dibujando copia lat";
+        glPushMatrix();
+        lat->desplegar();
+        glPopMatrix();
+    }
 }
 
