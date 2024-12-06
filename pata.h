@@ -7,7 +7,9 @@ public:
     Pata(float, float,  //x1, x2
          float, float,  //y1, y2
          float, float); //z1, z2
+    float x1, x2, y1, y2, z1, z2;
     void moverPatas(float, float);
+    Pata* copia();
 };
 
 #endif // PATA_H

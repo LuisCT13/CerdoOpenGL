@@ -8,6 +8,13 @@ Pata::Pata(float x1, float x2,
     /* x1, y1 y z1 deben ser números más chicos
      * x2, y2, z2 son números más grandes*/
 
+    this->x1 = x1;
+    this->x2 = x2;
+    this->y1 = y1;
+    this->y2 = y2;
+    this->z1 = z1;
+    this->z2 = z2;
+
     Superficie* s;
 
     //parte de ARRIBA
@@ -64,4 +71,28 @@ Pata::Pata(float x1, float x2,
 void Pata::moverPatas(float dx, float dz){
     // Acumula las transformaciones
     glTranslatef(dx, 0.0f, dz);
+}
+
+Pata* Pata::copia() {
+    // Obtener los valores de los parámetros del objeto original
+    float x1 = this->x1;  // Obtener el valor de x1
+    float x2 = this->x2;  // Obtener el valor de x2
+    float y1 = this->y1;  // Obtener el valor de y1
+    float y2 = this->y2;  // Obtener el valor de y2
+    float z1 = this->z1;  // Obtener el valor de z1
+    float z2 = this->z2;  // Obtener el valor de z2
+
+    Pata* copia = new Pata(x1, x2, y1, y2, z1, z2); // Crear una nueva instancia de Pata
+
+    // Copiar las superficies
+    for (Superficie* superficie : superficies) {
+        copia->agregar(superficie->copia());
+    }
+
+    // Copiar los ejes
+    copia->EjeX = this->EjeX->copia();
+    copia->EjeY = this->EjeY->copia();
+    copia->EjeZ = this->EjeZ->copia();
+
+    return copia;
 }

@@ -106,6 +106,14 @@ Cabeza::Cabeza(){
 
 
 }
-Cabeza* Cabeza::copia(){
 
+Cabeza* Cabeza::copia(){
+    Cabeza *pCopia = new Cabeza();
+    for(Superficie *s:this->superficies){
+        pCopia->agregar(s->copia());
+    }
+    pCopia->EjeX = this->EjeX->copia();
+    pCopia->EjeY = this->EjeY->copia();
+    pCopia->EjeZ = this->EjeZ->copia();
+    return pCopia;
 }

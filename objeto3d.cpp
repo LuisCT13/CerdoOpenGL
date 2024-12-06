@@ -24,11 +24,15 @@ void Objeto3D::desplegar() {
 }
 
 Objeto3D* Objeto3D::copia() {
-    Objeto3D* copia=new Objeto3D();
-    for (Superficie* superficie:superficies) {
+    Objeto3D* copia = new Objeto3D();
+    for (Superficie* superficie : superficies) {
         copia->agregar(superficie->copia());
     }
+    copia->EjeX = this->EjeX->copia();
+    copia->EjeY = this->EjeY->copia();
+    copia->EjeZ = this->EjeZ->copia();
     return copia;
+
 }
 
 void Objeto3D::transformar(Matriz3D* M) {

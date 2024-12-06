@@ -6,6 +6,7 @@ class Torso: public Objeto3D
 {
 public:
     Torso();
+    Torso* copia();
 };
 
 #endif // TORSO_H

@@ -19,306 +19,17 @@ OpenGLWidget::OpenGLWidget() {
     float x3 = 0.4, x4 = 0.6, y3= 0.6, y4 = 0.8;
     this->opcionesdeRotacion='x';
     cerdito = new Cerdo();
+    sup = cerdito->copia();
+    inf = cerdito->copia();
+    lat = cerdito->copia();
 
-    desplegarCopias();
 
-    // ---- PATA SUPERIOR IZQUIERDA ----
-
-    int z3 = 240/100, z4 = 190/100;
-
-    //parte de ARRIBA
-    s = new Superficie(1,0,0);// X    Y    Z
-    s->agregar(new Vertice(390, y2, z4));
-    s->agregar(new Vertice(440, y2, z4));
-    s->agregar(new Vertice(440, y2, z3));
-    s->agregar(new Vertice(390, y2, z3));
-    objeto3D->agregar(s);
-    // objeto3D->agregarPataSupIzq(s);
-    // objeto3D->agregarPatas(s);
-
-
-    //parte de abajo
-    s = new Superficie(1,0,0);// X    Y    Z
-    s->agregar(new Vertice(390, y1, z4));
-    s->agregar(new Vertice(440, y1, z4));
-    s->agregar(new Vertice(440, y1, z3));
-    s->agregar(new Vertice(390, y1, z3));
-    objeto3D->agregar(s);
-    // objeto3D->agregarPataSupIzq(s);
-    // objeto3D->agregarPatas(s);
-
-
-
-    //parte de derecha
-    s = new Superficie(1,0,0);// X    Y    Z
-    s->agregar(new Vertice(440, y1, z4));
-    s->agregar(new Vertice(440, y1, z3));
-    s->agregar(new Vertice(440, y2, z3));
-    s->agregar(new Vertice(440, y2, z4));
-    objeto3D->agregar(s);
-    // objeto3D->agregarPataSupIzq(s);
-    // objeto3D->agregarPatas(s);
-
-
-
-    //parte de izquierda
-    s = new Superficie(1,0,0);// X    Y    Z
-    s->agregar(new Vertice(390, y1, z4));
-    s->agregar(new Vertice(390, y1, z3));
-    s->agregar(new Vertice(390, y2, z3));
-    s->agregar(new Vertice(390, y2, z4));
-    objeto3D->agregar(s);
-    // objeto3D->agregarPataSupIzq(s);
-    // objeto3D->agregarPatas(s);
-
-
-
-    //parte de atrás
-    s = new Superficie(1,0,0);// X    Y    Z
-    s->agregar(new Vertice(390, y1, z3));
-    s->agregar(new Vertice(440, y1, z3));
-    s->agregar(new Vertice(440, y2, z3));
-    s->agregar(new Vertice(390, y2, z3));
-    objeto3D->agregar(s);
-    // objeto3D->agregarPataSupIzq(s);
-    // objeto3D->agregarPatas(s);
-
-
-
-    //parte de enfrente
-    s = new Superficie(1,0,0);// X    Y    Z
-    s->agregar(new Vertice(390, y1, z4));
-    s->agregar(new Vertice(440, y1, z4));
-    s->agregar(new Vertice(440, y2, z4));
-    s->agregar(new Vertice(390, y2, z4));
-    objeto3D->agregar(s);
-    // objeto3D->agregarPataSupIzq(s);
-    // objeto3D->agregarPatas(s);
-
-
-
-    // ---- PATA INFERIOR IZQUIERDA ----
-    //parte de ARRIBA
-    s = new Superficie(1,0,0);// X    Y    Z
-    s->agregar(new Vertice(390, y2, 340));
-    s->agregar(new Vertice(440, y2, 340));
-    s->agregar(new Vertice(440, y2, 390));
-    s->agregar(new Vertice(390, y2, 390));
-    objeto3D->agregar(s);
-    // objeto3D->agregarPataInfIzq(s);
-    // objeto3D->agregarPatas(s);
-
-
-
-    //parte de abajo
-    s = new Superficie(1,0,0);// X    Y    Z
-    s->agregar(new Vertice(390, y1, 340));
-    s->agregar(new Vertice(440, y1, 340));
-    s->agregar(new Vertice(440, y1, 390));
-    s->agregar(new Vertice(390, y1, 390));
-    objeto3D->agregar(s);
-    // objeto3D->agregarPataInfIzq(s);
-    // objeto3D->agregarPatas(s);
-
-
-
-    //parte de derecha
-    s = new Superficie(1,0,0);// X    Y    Z
-    s->agregar(new Vertice(440, y1, 340));
-    s->agregar(new Vertice(440, y1, 390));
-    s->agregar(new Vertice(440, y2, 390));
-    s->agregar(new Vertice(440, y2, 340));
-    objeto3D->agregar(s);
-    // objeto3D->agregarPataInfIzq(s);
-    // objeto3D->agregarPatas(s);
-
-
-
-    //parte de izquierda
-    s = new Superficie(1,0,0);// X    Y    Z
-    s->agregar(new Vertice(390, y1, 340));
-    s->agregar(new Vertice(390, y1, 390));
-    s->agregar(new Vertice(390, y2, 390));
-    s->agregar(new Vertice(390, y2, 340));
-    objeto3D->agregar(s);
-    // objeto3D->agregarPataInfIzq(s);
-    // objeto3D->agregarPatas(s);
-
-
-
-    //parte de atrás
-    s = new Superficie(1,0,0);// X    Y    Z
-    s->agregar(new Vertice(390, y1, 390));
-    s->agregar(new Vertice(440, y1, 390));
-    s->agregar(new Vertice(440, y2, 390));
-    s->agregar(new Vertice(390, y2, 390));
-    objeto3D->agregar(s);
-    // objeto3D->agregarPataInfIzq(s);
-    // objeto3D->agregarPatas(s);
-
-
-
-    //parte de enfrente
-    s = new Superficie(1,0,0);// X    Y    Z
-    s->agregar(new Vertice(390, y1, 340));
-    s->agregar(new Vertice(440, y1, 340));
-    s->agregar(new Vertice(440, y2, 340));
-    s->agregar(new Vertice(390, y2, 340));
-    objeto3D->agregar(s);
-    // objeto3D->agregarPataInfIzq(s);
-    // objeto3D->agregarPatas(s);
-
-
-
-    // ---- PATA INFERIOR DERECHA ----
-
-
-    //parte de ARRIBA
-    s = new Superficie(1,0,0);// X    Y    Z
-    s->agregar(new Vertice(x2, y2, z2));
-    s->agregar(new Vertice(x1, y2, z2));
-    s->agregar(new Vertice(x1, y2, z1));
-    s->agregar(new Vertice(x2, y2, z1));
-    objeto3D->agregar(s);
-    // objeto3D->agregarPataInfDer(s);
-    // objeto3D->agregarPatas(s);
-
-
-
-    //parte de abajo
-    s = new Superficie(1,0,0);// X    Y    Z
-    s->agregar(new Vertice(x2, y1, z2));
-    s->agregar(new Vertice(x1, y1, z2));
-    s->agregar(new Vertice(x1, y1, z1));
-    s->agregar(new Vertice(x2, y1, z1));
-    objeto3D->agregar(s);
-    // objeto3D->agregarPataInfDer(s);
-    // objeto3D->agregarPatas(s);
-
-
-
-    //parte de derecha
-    s = new Superficie(1,0,0);// X    Y    Z
-    s->agregar(new Vertice(x1, y1, z2));
-    s->agregar(new Vertice(x1, y1, z1));
-    s->agregar(new Vertice(x1, y2, z1));
-    s->agregar(new Vertice(x1, y2, z2));
-    objeto3D->agregar(s);
-    // objeto3D->agregarPataInfDer(s);
-    // objeto3D->agregarPatas(s);
-
-
-
-    //parte de izquierda
-    s = new Superficie(1,0,0);// X    Y    Z
-    s->agregar(new Vertice(x2, y1, z2));
-    s->agregar(new Vertice(x2, y1, z1));
-    s->agregar(new Vertice(x2, y2, z1));
-    s->agregar(new Vertice(x2, y2, z2));
-    objeto3D->agregar(s);
-    // objeto3D->agregarPataInfDer(s);
-    // objeto3D->agregarPatas(s);
-
-
-
-    //parte de atrás
-    s = new Superficie(1,0,0);// X    Y    Z
-    s->agregar(new Vertice(x2, y1, z1));
-    s->agregar(new Vertice(x1, y1, z1));
-    s->agregar(new Vertice(x1, y2, z1));
-    s->agregar(new Vertice(x2, y2, z1));
-    objeto3D->agregar(s);
-    // objeto3D->agregarPataInfDer(s);
-    // objeto3D->agregarPatas(s);
-
-
-
-    //parte de enfrente
-    s = new Superficie(1,0,0);// X    Y    Z
-    s->agregar(new Vertice(x2, y1, z2));
-    s->agregar(new Vertice(x1, y1, z2));
-    s->agregar(new Vertice(x1, y2, z2));
-    s->agregar(new Vertice(x2, y2, z2));
-    objeto3D->agregar(s);
-    // objeto3D->agregarPataInfDer(s);
-    // objeto3D->agregarPatas(s);
-
-
-
-    // ---- PATA SUPERIOR DERECHA ----
-    //parte de ARRIBA
-    s = new Superficie(1,0,0);// X    Y    Z
-    s->agregar(new Vertice(x2, y2, z4));
-    s->agregar(new Vertice(x1, y2, z4));
-    s->agregar(new Vertice(x1, y2, z3));
-    s->agregar(new Vertice(x2, y2, z3));
-    objeto3D->agregar(s);
-    // objeto3D->agregarPataSupDer(s);
-    // objeto3D->agregarPatas(s);
-
-
-
-    //parte de abajo
-    s = new Superficie(1,0,0);// X    Y    Z
-    s->agregar(new Vertice(x2, y1, z4));
-    s->agregar(new Vertice(x1, y1, z4));
-    s->agregar(new Vertice(x1, y1, z3));
-    s->agregar(new Vertice(x2, y1, z3));
-    objeto3D->agregar(s);
-    // objeto3D->agregarPataSupDer(s);
-    // objeto3D->agregarPatas(s);
-
-
-
-    //parte de derecha
-    s = new Superficie(1,0,0);// X    Y    Z
-    s->agregar(new Vertice(x1, y1, z4));
-    s->agregar(new Vertice(x1, y1, z3));
-    s->agregar(new Vertice(x1, y2, z3));
-    s->agregar(new Vertice(x1, y2, z4));
-    objeto3D->agregar(s);
-    // objeto3D->agregarPataSupDer(s);
-    // objeto3D->agregarPatas(s);
-
-
-
-    //parte de izquierda
-    s = new Superficie(1,0,0);// X    Y    Z
-    s->agregar(new Vertice(x2, y1, z4));
-    s->agregar(new Vertice(x2, y1, z3));
-    s->agregar(new Vertice(x2, y2, z3));
-    s->agregar(new Vertice(x2, y2, z4));
-    objeto3D->agregar(s);
-    //objeto3D->agregarPataSupDer(s);
-    //objeto3D->agregarPatas(s);
-
-
-
-    //parte de atrás
-    s = new Superficie(1,0,0);// X    Y    Z
-    s->agregar(new Vertice(x2, y1, z3));
-    s->agregar(new Vertice(x1, y1, z3));
-    s->agregar(new Vertice(x1, y2, z3));
-    s->agregar(new Vertice(x2, y2, z3));
-    objeto3D->agregar(s);
-    //objeto3D->agregarPataSupDer(s);
-    //objeto3D->agregarPatas(s);
-
-
-
-    //parte de enfrente
-    s = new Superficie(1,0,0);// X    Y    Z
-    s->agregar(new Vertice(x2, y1, z4));
-    s->agregar(new Vertice(x1, y1, z4));
-    s->agregar(new Vertice(x1, y2, z4));
-    s->agregar(new Vertice(x2, y2, z4));
-    objeto3D->agregar(s);
-    // objeto3D->agregarPataSupDer(s);
-    //objeto3D->agregarPatas(s);
 }
 
 void OpenGLWidget::initializeGL() {
     glClearColor(1,1,1,0);
+    desplegarCopias();
+
 }
 
 void OpenGLWidget::timerEvent(QTimerEvent *) {
@@ -359,9 +70,11 @@ void OpenGLWidget::mouseMoveEvent(QMouseEvent *e) {
 void OpenGLWidget::desplegarCopias( ) {
 
     //Creacion de las copias
-    sup= cerdito->copia();
-    inf= cerdito->copia();
-    lat= cerdito->copia();
+    //sup= cerdito->copia();
+    //inf= cerdito->copia();
+    //lat= cerdito->copia();
+
+
 
     //Declaración de la Matriz de Escalado para Hcaer mas pequeñas las Vistas
     float factorEscalado = 0.8; // Escala a la mitad del tamaño original
@@ -393,9 +106,13 @@ void OpenGLWidget::desplegarCopias( ) {
     lat->escalarPiezas(matrizRotacionLateral);
 
     // //Traslación de las Copias
-    // sup->trasladar(-0.10, -1, 0);
-    // inf->trasladar(-0.5, -1, 0);
-    // lat->trasladar(-1, -1, 0);
+    sup->trasladar(-0.10, -1, 0);
+    inf->trasladar(-0.5, -1, 0);
+    lat->trasladar(-1, -1, 0);
+
+    //inf->desplegar();
+    //lat->desplegar();
+    //sup->desplegar();
 
 }
 
@@ -432,8 +149,19 @@ void OpenGLWidget::paintGL( ) {
     glFrustum(-1.0,1.0,-1.0,1.0,2.0,10.0);
     glMatrixMode(GL_MODELVIEW);
     cerdito->desplegar();
-     // inf->desplegar();
-     // lat->desplegar();
-     // sup->desplegar();
+    //glPushMatrix();
+    //desplegarCopias();
+    //glPopMatrix();
+    glPushMatrix(); // Guardar el estado de la matriz
+    sup->desplegar(); // Dibujar la copia superior
+    glPopMatrix(); // Restaurar el estado de la matriz
+
+    glPushMatrix(); // Guardar el estado de la matriz
+    inf->desplegar(); // Dibujar la copia inferior
+    glPopMatrix(); // Restaurar el estado de la matriz
+
+    glPushMatrix(); // Guardar el estado de la matriz
+    lat->desplegar(); // Dibujar la copia lateral
+    glPopMatrix(); // Restaurar el estado de la matriz
 }
 

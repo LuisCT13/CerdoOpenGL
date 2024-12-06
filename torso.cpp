@@ -54,3 +54,14 @@ Torso::Torso() {
     s->agregar(new Vertice(0.1, 0.2, 0.5));
     agregar(s);
 }
+
+Torso* Torso::copia() {
+    Torso* copia = new Torso();
+    for(Superficie *s:this->superficies){
+        copia->agregar(s->copia());
+    }
+    copia->EjeX = this->EjeX->copia();
+    copia->EjeY = this->EjeY->copia();
+    copia->EjeZ = this->EjeZ->copia();
+    return copia;
+}
