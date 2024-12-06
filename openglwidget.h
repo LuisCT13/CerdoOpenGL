@@ -32,6 +32,10 @@ private:
     void mousePressEvent(QMouseEvent *);
     void mouseReleaseEvent(QMouseEvent *);
     void rotarenEje(Linea*);
+    void rotarEnX();
+    void rotarEnY();
+    void rotarEnZ();
+    void moverCabeza();
 };
 
 #endif // OPENGLWIDGET_H

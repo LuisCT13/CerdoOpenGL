@@ -40,6 +40,14 @@ void Objeto3D::transformar(Matriz3D* M) {
     this->EjeZ->transformar(M);
 }
 
+void Objeto3D::mover(float dx, float dy, float dz) {
+    Matriz3D* T = new Matriz3D(1, 0, 0, dx,
+                               0, 1, 0, dy,
+                               0, 0, 1, dz);
+    transformar(T);
+    delete T;
+}
+
 
 
 void Objeto3D::rotar(float teta,Linea* eje) {

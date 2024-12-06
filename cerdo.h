@@ -18,6 +18,8 @@ public:
     Pata* pataInfIzq;
     Pata* pataInfDer;
     void desplegar();
+    void mover(float, float, float);
+    void moverCabeza(float);
     void rotar(float,  char);
 };
 

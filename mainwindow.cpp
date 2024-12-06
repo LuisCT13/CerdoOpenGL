@@ -33,3 +33,14 @@ void MainWindow::on_rotarenZ_clicked()
     openGLWidget->opcionesdeRotacion='z';
 
 }
+
+void MainWindow::on_selCabeza_clicked(){
+}
+
+void MainWindow::on_selTodo_clicked(){
+
+}
+
+void MainWindow::on_selPatas_clicked(){
+
+}

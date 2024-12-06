@@ -21,6 +21,10 @@ private slots:
     void on_rotarenX_clicked();
     void on_rotarenY_clicked();
     void on_rotarenZ_clicked();
+    void on_selCabeza_clicked();
+    void on_selTodo_clicked();
+    void on_selPatas_clicked();
+
 
 private:
     Ui::MainWindow *ui;

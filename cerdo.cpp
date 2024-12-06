@@ -30,6 +30,21 @@ void Cerdo::desplegar(){
     pataInfIzq->desplegar();
 
 }
+
+void Cerdo::mover(float dx, float dy, float dz) {
+    cabezaCerdo->mover(dx, dy, dz);
+    torsoCerdo->mover(dx, dy, dz);
+    pataSupIzq->mover(dx, dy, dz);
+    pataSupDer->mover(dx, dy, dz);
+    pataInfDer->mover(dx, dy, dz);
+    pataInfIzq->mover(dx, dy, dz);
+}
+
+void Cerdo::moverCabeza(float angulo) {
+    cabezaCerdo->rotar(angulo, cabezaCerdo->EjeX);
+    cabezaCerdo->rotar(angulo, cabezaCerdo->EjeY);
+}
+
 void Cerdo::rotar(float angulo, char opcion){
     if(opcion=='x'){
         cabezaCerdo->rotar(angulo, cabezaCerdo->EjeX);

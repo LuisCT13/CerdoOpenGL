@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1000</width>
+    <width>1059</width>
     <height>818</height>
    </rect>
   </property>
@@ -19,7 +19,7 @@
      <rect>
       <x>30</x>
       <y>40</y>
-      <width>841</width>
+      <width>881</width>
       <height>721</height>
      </rect>
     </property>
@@ -28,7 +28,7 @@
    <widget class="QPushButton" name="rotarenX">
     <property name="geometry">
      <rect>
-      <x>880</x>
+      <x>940</x>
       <y>40</y>
       <width>80</width>
       <height>24</height>
@@ -41,7 +41,7 @@
    <widget class="QPushButton" name="rotarenY">
     <property name="geometry">
      <rect>
-      <x>880</x>
+      <x>940</x>
       <y>70</y>
       <width>80</width>
       <height>24</height>
@@ -54,7 +54,7 @@
    <widget class="QPushButton" name="rotarenZ">
     <property name="geometry">
      <rect>
-      <x>880</x>
+      <x>940</x>
       <y>100</y>
       <width>80</width>
       <height>24</height>
@@ -64,14 +64,53 @@
      <string>Rotar en Z</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="selCabeza">
+    <property name="geometry">
+     <rect>
+      <x>940</x>
+      <y>600</y>
+      <width>86</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Cabeza</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="selPatas">
+    <property name="geometry">
+     <rect>
+      <x>940</x>
+      <y>640</y>
+      <width>86</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Patas</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="selTodo">
+    <property name="geometry">
+     <rect>
+      <x>940</x>
+      <y>680</y>
+      <width>86</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Cerdito</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1000</width>
-     <height>21</height>
+     <width>1059</width>
+     <height>25</height>
     </rect>
    </property>
   </widget>
