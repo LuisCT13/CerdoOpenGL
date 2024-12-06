@@ -74,5 +74,5 @@ Cerdo* Cerdo::copia(float x, float y, float z){
     copia->pataInfIzq=this->pataInfIzq->copia();
     copia->pataSupDer=this->pataSupDer->copia();
     copia->pataSupIzq=this->pataSupIzq->copia();
-
+    return copia;
 }
