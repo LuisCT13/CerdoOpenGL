@@ -20,13 +20,13 @@ OpenGLWidget::OpenGLWidget() {
     this->opcionesdeRotacion='x';
     cerdito = new Cerdo();
 
-    /*sup = cerdito->copia();
+    sup = cerdito->copia();
     inf = cerdito->copia();
-    lat = cerdito->copia();*/
+    lat = cerdito->copia();
 
-    sup =new Cerdo();
-    inf = new Cerdo();
-    lat = new Cerdo();
+    // sup =new Cerdo();
+    // inf = new Cerdo();
+    // lat = new Cerdo();
 
 
 }
