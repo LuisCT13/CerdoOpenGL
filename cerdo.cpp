@@ -68,12 +68,14 @@ void Cerdo::trasladar(float x, float y, float z){
 Cerdo* Cerdo::copia(){
     // Crear las copias de todas las partes del cerdo
     Cerdo *copia= new Cerdo();
-    copia->cabezaCerdo=this->cabezaCerdo;
-    copia->torsoCerdo=this->torsoCerdo;
-    copia->pataInfDer=this->pataInfDer;
-    copia->pataInfIzq=this->pataInfIzq;
-    copia->pataSupDer=this->pataSupDer;
-    copia->pataSupIzq=this->pataSupIzq;
+    for (Superficie* superficie:cabezaCerdo->superficies) {
+        copia->agregar(superficie->copia());
+    }
+    // copia->torsoCerdo=this->torsoCerdo;
+    // copia->pataInfDer=this->pataInfDer;
+    // copia->pataInfIzq=this->pataInfIzq;
+    // copia->pataSupDer=this->pataSupDer;
+    // copia->pataSupIzq=this->pataSupIzq;
     return copia;
 }
 void Cerdo:: escalarPiezas(Matriz3D *M){

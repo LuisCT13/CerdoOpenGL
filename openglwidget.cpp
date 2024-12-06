@@ -22,6 +22,7 @@ OpenGLWidget::OpenGLWidget() {
 
     desplegarCopias();
 
+
     // ---- PATA SUPERIOR IZQUIERDA ----
 
     int z3 = 240/100, z4 = 190/100;
@@ -431,8 +432,8 @@ void OpenGLWidget::paintGL( ) {
     glLoadIdentity();
     glFrustum(-1.0,1.0,-1.0,1.0,2.0,10.0);
     glMatrixMode(GL_MODELVIEW);
-    cerdito->desplegar();
-     // inf->desplegar();
+    //cerdito->desplegar();
+      inf->desplegar();
      // lat->desplegar();
      // sup->desplegar();
 }
