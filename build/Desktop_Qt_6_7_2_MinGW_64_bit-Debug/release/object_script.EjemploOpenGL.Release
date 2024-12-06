@@ -6,6 +6,7 @@ release/mainwindow.o
 release/matriz3d.o
 release/objeto3d.o
 release/openglwidget.o
+release/pata.o
 release/superficie.o
 release/torso.o
 release/vertice.o
