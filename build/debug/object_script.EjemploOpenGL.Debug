@@ -6,7 +6,10 @@ debug/mainwindow.o
 debug/matriz3d.o
 debug/objeto3d.o
 debug/openglwidget.o
+<<<<<<< Updated upstream
 debug/pata.o
+=======
+>>>>>>> Stashed changes
 debug/superficie.o
 debug/torso.o
 debug/vertice.o

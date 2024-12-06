@@ -6,7 +6,10 @@ release/mainwindow.o
 release/matriz3d.o
 release/objeto3d.o
 release/openglwidget.o
+<<<<<<< Updated upstream
 release/pata.o
+=======
+>>>>>>> Stashed changes
 release/superficie.o
 release/torso.o
 release/vertice.o
