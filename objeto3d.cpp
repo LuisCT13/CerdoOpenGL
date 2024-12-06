@@ -39,6 +39,7 @@ void Objeto3D::transformar(Matriz3D* M) {
     for (Superficie* superficie:superficies) {
         superficie->transformar(M);
     }
+
     this->EjeX->transformar(M);
     this->EjeY->transformar(M);
     this->EjeZ->transformar(M);

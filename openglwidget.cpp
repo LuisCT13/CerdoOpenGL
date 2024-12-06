@@ -19,6 +19,7 @@ OpenGLWidget::OpenGLWidget() {
     float x3 = 0.4, x4 = 0.6, y3= 0.6, y4 = 0.8;
     this->opcionesdeRotacion='x';
     cerdito = new Cerdo();
+
     sup = cerdito->copia();
     inf = cerdito->copia();
     lat = cerdito->copia();
@@ -35,13 +36,18 @@ void OpenGLWidget::initializeGL() {
 void OpenGLWidget::timerEvent(QTimerEvent *) {
     if(opcionesdeRotacion=='x'){
      cerdito->rotar((angulo/3.14)/180, 'x');
-
+     inf->rotar((angulo/3.14)/180, 'x');
+     lat->rotar((angulo/3.14)/180, 'x');
     }
     else if(opcionesdeRotacion=='y'){
-    cerdito->rotar((angulo/3.14)/180, 'y');
+        cerdito->rotar((angulo/3.14)/180, 'y');
+         inf->rotar((angulo/3.14)/180, 'y');
+         lat->rotar((angulo/3.14)/180, 'y');
     }
     else if(opcionesdeRotacion=='z'){
         cerdito->rotar((angulo/3.14)/180, 'z');
+         inf->rotar((angulo/3.14)/180, 'z');
+         lat->rotar((angulo/3.14)/180, 'z');
     }
     update();
 }
@@ -68,22 +74,32 @@ void OpenGLWidget::mouseMoveEvent(QMouseEvent *e) {
     update();
 }
 void OpenGLWidget::desplegarCopias( ) {
+    delete sup;
+    delete inf;
+    delete lat;
 
     //Creacion de las copias
     //sup= cerdito->copia();
     //inf= cerdito->copia();
     //lat= cerdito->copia();
 
-
+    sup = cerdito->copia();
+    inf = cerdito->copia();
+    lat = cerdito->copia();
 
     //Declaración de la Matriz de Escalado para Hcaer mas pequeñas las Vistas
-    float factorEscalado = 0.8; // Escala a la mitad del tamaño original
+    float factorEscalado = 0.4; // Escala a la mitad del tamaño original
     Matriz3D* matrizEscalado = new Matriz3D(factorEscalado, 0, 0, 0,
                                             0, factorEscalado, 0, 0,
                                             0, 0, factorEscalado, 0);
+    float factorEscalado2 = 0.7; // Escala a la mitad del tamaño original
+    Matriz3D* matrizEscaladoOrg = new Matriz3D(factorEscalado2, 0, 0, 0,
+                                            0, factorEscalado2, 0, 0,
+                                            0, 0, factorEscalado2, 0);
     sup->escalarPiezas(matrizEscalado);
     inf->escalarPiezas(matrizEscalado);
     lat->escalarPiezas(matrizEscalado);
+    cerdito->escalarPiezas(matrizEscaladoOrg);
 
     //Aplicar las Transformaciones para las vistas
     //Superior
@@ -106,9 +122,9 @@ void OpenGLWidget::desplegarCopias( ) {
     lat->escalarPiezas(matrizRotacionLateral);
 
     // //Traslación de las Copias
-    sup->trasladar(-0.10, -1, 0);
-    inf->trasladar(-0.5, -1, 0);
-    lat->trasladar(-1, -1, 0);
+    sup->trasladar(-1.1, -0.8, 0);
+    inf->trasladar(-0.3, -1, 0);
+    lat->trasladar(1, -1, 0);
 
     //inf->desplegar();
     //lat->desplegar();
