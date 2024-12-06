@@ -4,6 +4,9 @@
 #include "cerdo.h"
 
 OpenGLWidget::OpenGLWidget() {
+    anguloX=15;
+    anguloY=15;
+    anguloZ=15;
     angulo=15;
     sentido=1;
     focoX = 0.0f;
@@ -14,6 +17,9 @@ OpenGLWidget::OpenGLWidget() {
     Superficie* s=new Superficie(1,0,0);
     float x1 = 510, x2 = 460, y1 = 420, y2 = 321, z1 = 390, z2 = 340, z5 = 0.975, z6 = 0.9;
     float x3 = 0.4, x4 = 0.6, y3= 0.6, y4 = 0.8;
+    this->opcionesdeRotacion='x';
+    cerdito = new Cerdo();
+
 
 
     // ---- PATA SUPERIOR IZQUIERDA ----
@@ -316,7 +322,22 @@ void OpenGLWidget::initializeGL() {
 }
 
 void OpenGLWidget::timerEvent(QTimerEvent *) {
-    angulo+=sentido;
+    if(opcionesdeRotacion=='x'){
+        //glRotated(angulo, 1, 0, 0);//rota la figura al rededor del eje x en el angulo dado
+        cerdito->rotar((angulo/3.14)/18000, 'x');
+
+    }
+    else if(opcionesdeRotacion=='y'){
+        //glRotated(angulo, 0, 1, 0);//rota la figura al rededor del eje y en el angulo dado
+        cerdito->rotar((angulo/3.14)/18000, 'y');
+
+    }
+    else if(opcionesdeRotacion=='z'){
+        //glRotated(angulo, 0, 0, 1);//rota la figura al rededor del eje z en el angulo dado
+        cerdito->rotar((angulo/3.14)/18000, 'z');
+    }
+
+    //angulo+=sentido;
     update();
 }
 
@@ -328,6 +349,7 @@ void OpenGLWidget::mousePressEvent(QMouseEvent *e){
     else if(e->button()==Qt::LeftButton){
         sentido = -1;
     }
+    update();
 }
 void OpenGLWidget::mouseReleaseEvent(QMouseEvent *){
     timer.stop();
@@ -344,7 +366,8 @@ void OpenGLWidget::mouseMoveEvent(QMouseEvent *e) {
     update();
 }
 
-void OpenGLWidget::paintGL() {
+void OpenGLWidget::paintGL( ) {
+
     glEnable(GL_DEPTH_TEST);
     glEnable(GL_CULL_FACE);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -367,9 +390,9 @@ void OpenGLWidget::paintGL() {
     glNormal3f(0, 0, 1);
     glColor3f(1.2f, 0.75f, 0.75f);
 
+    //Rotacion de la figura
     glTranslatef(0.25, 0.25, -3.5);
-    glRotated(angulo, 0, 1, 0);
-    glRotated(15, 1, 0, 0);
+
     glTranslatef(-0.25, -0.25, 0.25);
 
     glMatrixMode(GL_PROJECTION);
@@ -377,8 +400,6 @@ void OpenGLWidget::paintGL() {
     glFrustum(-1.0,1.0,-1.0,1.0,2.0,10.0);
     glMatrixMode(GL_MODELVIEW);
 
-    QSize tam = size();
-    Cerdo *cerdito = new Cerdo();
     cerdito->desplegar();
 }
 

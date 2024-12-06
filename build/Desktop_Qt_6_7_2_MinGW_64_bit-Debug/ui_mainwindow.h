@@ -14,6 +14,7 @@
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QWidget>
 
@@ -25,6 +26,9 @@ public:
     QWidget *centralwidget;
     QWidget *gridLayoutWidget;
     QGridLayout *LayoutOpenGL;
+    QPushButton *rotarenX;
+    QPushButton *rotarenY;
+    QPushButton *rotarenZ;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -32,7 +36,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(900, 818);
+        MainWindow->resize(1000, 818);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
         gridLayoutWidget = new QWidget(centralwidget);
@@ -41,10 +45,19 @@ public:
         LayoutOpenGL = new QGridLayout(gridLayoutWidget);
         LayoutOpenGL->setObjectName("LayoutOpenGL");
         LayoutOpenGL->setContentsMargins(0, 0, 0, 0);
+        rotarenX = new QPushButton(centralwidget);
+        rotarenX->setObjectName("rotarenX");
+        rotarenX->setGeometry(QRect(880, 40, 80, 24));
+        rotarenY = new QPushButton(centralwidget);
+        rotarenY->setObjectName("rotarenY");
+        rotarenY->setGeometry(QRect(880, 70, 80, 24));
+        rotarenZ = new QPushButton(centralwidget);
+        rotarenZ->setObjectName("rotarenZ");
+        rotarenZ->setGeometry(QRect(880, 100, 80, 24));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 900, 26));
+        menubar->setGeometry(QRect(0, 0, 1000, 21));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName("statusbar");
@@ -58,6 +71,9 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
+        rotarenX->setText(QCoreApplication::translate("MainWindow", "Rotar en X", nullptr));
+        rotarenY->setText(QCoreApplication::translate("MainWindow", "Rotar en Y", nullptr));
+        rotarenZ->setText(QCoreApplication::translate("MainWindow", "Rotar en Z", nullptr));
     } // retranslateUi
 
 };

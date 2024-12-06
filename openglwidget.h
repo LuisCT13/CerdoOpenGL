@@ -5,13 +5,21 @@
 #include <QBasicTimer>
 #include <QMouseEvent>
 #include "objeto3d.h"
+#include "linea.h"
+#include "cerdo.h"
 
 class OpenGLWidget : public QOpenGLWidget
 {
 public:
     OpenGLWidget();
+    char opcionesdeRotacion;
+
 private:
+    Cerdo *cerdito;
     int angulo;
+    int anguloX;
+    int anguloY;
+    int anguloZ;
     QBasicTimer timer;
     int sentido;
     float focoX;
@@ -23,6 +31,7 @@ private:
     void timerEvent(QTimerEvent *);
     void mousePressEvent(QMouseEvent *);
     void mouseReleaseEvent(QMouseEvent *);
+    void rotarenEje(Linea*);
 };
 
 #endif // OPENGLWIDGET_H

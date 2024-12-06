@@ -2,6 +2,9 @@
 #include <cmath>
 
 Objeto3D::Objeto3D() {
+    EjeX = new Linea(380,317,255,516,317,255);
+    EjeY = new Linea(450,200,255,450,420,255);
+    EjeZ = new Linea(448,307,90,448,307,390);
 }
 
 Objeto3D::~Objeto3D() {
@@ -33,6 +36,8 @@ void Objeto3D::transformar(Matriz3D* M) {
         superficie->transformar(M);
     }
 }
+
+
 
 void Objeto3D::rotar(float teta,Linea* eje) {
     float a=eje->p2->x-eje->p1->x;

@@ -2,6 +2,7 @@
 #define OBJETO3D_H
 
 #include "superficie.h"
+#include "linea.h"
 
 class Objeto3D
 {
@@ -14,6 +15,10 @@ public:
     Objeto3D *copia();
     void rotar(float,Linea*);
     void transformar(Matriz3D*);
+    Linea *EjeX;
+    Linea *EjeY;
+    Linea *EjeZ;
+
 };
 
 #endif // OBJETO3D_H

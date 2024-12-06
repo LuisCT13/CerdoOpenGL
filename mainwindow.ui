@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>900</width>
+    <width>1000</width>
     <height>818</height>
    </rect>
   </property>
@@ -25,14 +25,53 @@
     </property>
     <layout class="QGridLayout" name="LayoutOpenGL"/>
    </widget>
+   <widget class="QPushButton" name="rotarenX">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>40</y>
+      <width>80</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Rotar en X</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="rotarenY">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>70</y>
+      <width>80</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Rotar en Y</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="rotarenZ">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>100</y>
+      <width>80</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Rotar en Z</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>900</width>
-     <height>26</height>
+     <width>1000</width>
+     <height>21</height>
     </rect>
    </property>
   </widget>
