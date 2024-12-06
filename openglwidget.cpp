@@ -20,7 +20,7 @@ OpenGLWidget::OpenGLWidget() {
     this->opcionesdeRotacion='x';
     cerdito = new Cerdo();
 
-
+    desplegarCopias();
 
     // ---- PATA SUPERIOR IZQUIERDA ----
 
@@ -364,7 +364,7 @@ void OpenGLWidget::desplegarCopias( ) {
     lat= cerdito->copia();
 
     //Declaración de la Matriz de Escalado para Hcaer mas pequeñas las Vistas
-    float factorEscalado = 0.5; // Escala a la mitad del tamaño original
+    float factorEscalado = 0.8; // Escala a la mitad del tamaño original
     Matriz3D* matrizEscalado = new Matriz3D(factorEscalado, 0, 0, 0,
                                             0, factorEscalado, 0, 0,
                                             0, 0, factorEscalado, 0);
@@ -392,10 +392,10 @@ void OpenGLWidget::desplegarCopias( ) {
                                                    -sin(anguloLat), 0, cos(anguloLat), 0);
     lat->escalarPiezas(matrizRotacionLateral);
 
-    //Traslación de las Copias
-    sup->trasladar(-0.10, -1, 0);
-    inf->trasladar(-0.5, -1, 0);
-    lat->trasladar(-1, -1, 0);
+    // //Traslación de las Copias
+    // sup->trasladar(-0.10, -1, 0);
+    // inf->trasladar(-0.5, -1, 0);
+    // lat->trasladar(-1, -1, 0);
 
 }
 
@@ -432,8 +432,8 @@ void OpenGLWidget::paintGL( ) {
     glFrustum(-1.0,1.0,-1.0,1.0,2.0,10.0);
     glMatrixMode(GL_MODELVIEW);
     cerdito->desplegar();
-    inf->desplegar();
-    lat->desplegar();
-    sup->desplegar();
+     // inf->desplegar();
+     // lat->desplegar();
+     // sup->desplegar();
 }
 

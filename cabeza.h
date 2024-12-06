@@ -7,6 +7,7 @@ class Cabeza: public Objeto3D
 public:
     Cabeza();
     void moverCabeza();
+    Cabeza* copia();
 };
 
 #endif // CABEZA_H

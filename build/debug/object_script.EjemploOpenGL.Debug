@@ -1,0 +1,13 @@
+debug/cabeza.o
+debug/cerdo.o
+debug/linea.o
+debug/main.o
+debug/mainwindow.o
+debug/matriz3d.o
+debug/objeto3d.o
+debug/openglwidget.o
+debug/pata.o
+debug/superficie.o
+debug/torso.o
+debug/vertice.o
+debug/moc_mainwindow.o

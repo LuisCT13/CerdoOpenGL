@@ -106,3 +106,6 @@ Cabeza::Cabeza(){
 
 
 }
+Cabeza* Cabeza::copia(){
+
+}
