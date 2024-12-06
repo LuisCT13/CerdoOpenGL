@@ -20,6 +20,7 @@ public:
     void desplegar();
     void rotar(float,  char);
     void trasladar(float, float, float);
+    Cerdo *copia();
 };
 
 #endif // CERDO_H

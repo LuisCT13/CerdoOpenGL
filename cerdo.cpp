@@ -65,3 +65,14 @@ void Cerdo::trasladar(float x, float y, float z){
     pataSupDer->trasladar(x,y,z);
     pataSupIzq->trasladar(x,y,z);
 }
+Cerdo* Cerdo::copia(float x, float y, float z){
+    // Crear las copias de todas las partes del cerdo
+    Cerdo *copia= new Cerdo();
+    copia->cabezaCerdo=this->cabezaCerdo->copia();
+    copia->torsoCerdo=this->torsoCerdo->copia();
+    copia->pataInfDer=this->pataInfDer->copia();
+    copia->pataInfIzq=this->pataInfIzq->copia();
+    copia->pataSupDer=this->pataSupDer->copia();
+    copia->pataSupIzq=this->pataSupIzq->copia();
+
+}
