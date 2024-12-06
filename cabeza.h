@@ -7,6 +7,7 @@ class Cabeza: public Objeto3D
 public:
     Cabeza();
     void moverCabeza();
+
 };
 
 #endif // CABEZA_H

@@ -13,6 +13,8 @@ class OpenGLWidget : public QOpenGLWidget
 public:
     OpenGLWidget();
     char opcionesdeRotacion;
+    int estado;
+
 
 private:
     Cerdo *cerdito;

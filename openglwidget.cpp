@@ -17,6 +17,7 @@ OpenGLWidget::OpenGLWidget() {
     sentido=1;
     focoX = 0.0f;
     focoY = 1.0f;
+    estado = 0;
     setMouseTracking(true);
     //QColor rosaCuerpo(255, 188, 191);
     objeto3D=new Objeto3D();
@@ -63,16 +64,27 @@ void OpenGLWidget::mouseMoveEvent(QMouseEvent *e) {
     int alto = height();
     focoX = (2.0f * e->position().x() / ancho) - 1.0f;
     focoY = 1.0f - (2.0f * e->position().y() / alto);
-    if (e->buttons() & Qt::LeftButton) {
-        int dx = e->x() - lastMouseX;
-        int dy = e->y() - lastMouseY;
 
-        // Ajusta la sensibilidad de la rotación según sea necesario
-        float anguloX = -dy / 100.0f;
-        float anguloY = -dx / 100.0f;
+    int dx = e->x() - lastMouseX;
+    int dy = e->y() - lastMouseY;
 
+    // Ajusta la sensibilidad de la rotación según sea necesario
+    float anguloX = dy / 100.0f;
+    float anguloY = -dx / 100.0f;
+
+
+    if (e->buttons() & Qt::LeftButton && estado == 1) {
         cerdito->rotar(anguloX, 'x');
         cerdito->rotar(anguloY, 'y');
+
+    } else if (e->buttons() & Qt::LeftButton && estado == 2){
+        cerdito->moverCabeza(anguloX, 'x');
+        cerdito->moverCabeza(anguloY, 'y');
+
+    } else if (e->buttons() & Qt::LeftButton && estado == 3){
+        cerdito->moverPatas(anguloX, 'x');
+        cerdito->moverPatas(anguloY, 'z');
+
     }
     lastMouseX = e->x();
     lastMouseY = e->y();
@@ -124,4 +136,8 @@ void OpenGLWidget::rotarEnY() {
 
 void OpenGLWidget::rotarEnZ() {
     rotarZ = !rotarZ;
+}
+
+void OpenGLWidget::moverCabeza(){
+    //estado = 2;
 }

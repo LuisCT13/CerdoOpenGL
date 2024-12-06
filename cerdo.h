@@ -19,7 +19,8 @@ public:
     Pata* pataInfDer;
     void desplegar();
     void mover(float, float, float);
-    void moverCabeza(float);
+    void moverCabeza(float, char);
+    void moverPatas(float, char);
     void rotar(float,  char);
 };
 

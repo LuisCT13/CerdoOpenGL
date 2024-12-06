@@ -1,4 +1,5 @@
 #include "objeto3d.h"
+#include "qvectornd.h"
 #include <cmath>
 
 Objeto3D::Objeto3D() {
@@ -50,6 +51,7 @@ void Objeto3D::mover(float dx, float dy, float dz) {
 
 
 
+
 void Objeto3D::rotar(float teta,Linea* eje) {
     float a=eje->p2->x-eje->p1->x;
     float b=eje->p2->y-eje->p1->y;
@@ -90,7 +92,30 @@ void Objeto3D::rotar(float teta,Linea* eje) {
     delete M;
 }
 
+QVector3D Objeto3D::calcularCentro(const std::vector<Superficie*>& superficies) {
+    float sumaX = 0, sumaY = 0, sumaZ = 0;
+    int contador = 0;
 
+    for (Superficie* superficie : superficies) {
+        for (Vertice* vertice : superficie->vertices) {
+            sumaX += vertice->x;
+            sumaY += vertice->y;
+            sumaZ += vertice->z;
+            contador++;
+        }
+    }
+
+    // Asegurarse de que haya vértices antes de calcular el promedio
+    if (contador > 0) {
+        float centroX = sumaX / contador;
+        float centroY = sumaY / contador;
+        float centroZ = sumaZ / contador;
+        return QVector3D(centroX, centroY, centroZ);
+    } else {
+        // Si no hay vértices, devolver el origen como valor por defecto
+        return QVector3D(0, 0, 0);
+    }
+}
 
 
 

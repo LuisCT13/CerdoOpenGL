@@ -35,12 +35,14 @@ void MainWindow::on_rotarenZ_clicked()
 }
 
 void MainWindow::on_selCabeza_clicked(){
+    openGLWidget->estado = 2;
 }
 
 void MainWindow::on_selTodo_clicked(){
-
+    openGLWidget->estado = 1;
 }
 
 void MainWindow::on_selPatas_clicked(){
+    openGLWidget->estado = 3;
 
 }
