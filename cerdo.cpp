@@ -57,3 +57,11 @@ void Cerdo::rotar(float angulo, char opcion){
         pataInfIzq->rotar(angulo, pataSupIzq->EjeZ);
     }
 }
+void Cerdo::trasladar(float x, float y, float z){
+    cabezaCerdo->trasladar(x,y,z);
+    torsoCerdo->trasladar(x,y,z);
+    pataInfDer->trasladar(x,y,z);
+    pataInfIzq->trasladar(x,y,z);
+    pataSupDer->trasladar(x,y,z);
+    pataSupIzq->trasladar(x,y,z);
+}

@@ -51,3 +51,8 @@ void Superficie::transformar(Matriz3D* M) {
         vertice->transformar(M);
     }
 }
+void Superficie::trasladar(float x, float y, float z){
+    for(Vertice* vertice:this->vertices){
+        vertice->trasladar(x, y, z);
+    }
+}

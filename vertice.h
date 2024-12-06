@@ -15,6 +15,8 @@ public:
     void desplegar();
     Vertice *copia();
     void transformar(Matriz3D*);
+    void trasladar(float, float, float);
+
 };
 
 #endif // VERTICE_H

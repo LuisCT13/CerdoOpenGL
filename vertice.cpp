@@ -38,7 +38,11 @@ void Vertice::transformar(Matriz3D* matriz)
         matriz->datos[2][2] * za +
         matriz->datos[2][3];
 }
-
+void Vertice::trasladar(float dx, float dy, float dz){
+    this->x+=dx;
+    this->y+=dy;
+    this->z-=dz;
+}
 
 
 

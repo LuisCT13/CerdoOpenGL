@@ -19,6 +19,7 @@ public:
     Pata* pataInfDer;
     void desplegar();
     void rotar(float,  char);
+    void trasladar(float, float, float);
 };
 
 #endif // CERDO_H

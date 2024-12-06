@@ -17,6 +17,8 @@ public:
     Superficie* copia();
     void desplegar();
     void transformar(Matriz3D*);
+    void trasladar(float, float, float);
+
 };
 
 #endif // SUPERFICIE_H

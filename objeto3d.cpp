@@ -81,6 +81,11 @@ void Objeto3D::rotar(float teta,Linea* eje) {
     delete T2;
     delete M;
 }
+void Objeto3D::trasladar(float x, float y, float z){
+    for(Superficie* superficie:this->superficies){
+        superficie->trasladar(x, y, z);
+    }
+}
 
 
 
