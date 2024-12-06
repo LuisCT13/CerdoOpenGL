@@ -20,9 +20,13 @@ OpenGLWidget::OpenGLWidget() {
     this->opcionesdeRotacion='x';
     cerdito = new Cerdo();
 
-    sup = cerdito->copia();
+    /*sup = cerdito->copia();
     inf = cerdito->copia();
-    lat = cerdito->copia();
+    lat = cerdito->copia();*/
+
+    sup =new Cerdo();
+    inf = new Cerdo();
+    lat = new Cerdo();
 
 
 }
@@ -35,6 +39,7 @@ void OpenGLWidget::initializeGL() {
 }
 
 void OpenGLWidget::timerEvent(QTimerEvent *) {
+
     if(opcionesdeRotacion=='x'){
      cerdito->rotar((angulo/3.14)/180, 'x');
     }
@@ -70,6 +75,10 @@ void OpenGLWidget::mouseMoveEvent(QMouseEvent *e) {
     update();
 }
 void OpenGLWidget::desplegarCopias( ) {
+
+    delete sup;
+    delete inf;
+    delete lat;
 
 
     sup = cerdito->copia();
@@ -120,14 +129,15 @@ void OpenGLWidget::desplegarCopias( ) {
     delete matrizRotacionLateral;
     delete matrizRotacionSup;
 
-     // inf->desplegar();
-     // lat->desplegar();
-     // sup->desplegar();
+     //inf->desplegar();
+     //lat->desplegar();
+     //sup->desplegar();
 
 }
 
 void OpenGLWidget::paintGL( ) {
 
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // Limpiar la pantalla
 
     glEnable(GL_DEPTH_TEST);
     glEnable(GL_CULL_FACE);
@@ -169,11 +179,11 @@ void OpenGLWidget::paintGL( ) {
     // glPopMatrix(); // Restaurar el estado de la matriz
 
     // glPushMatrix(); // Guardar el estado de la matriz
-     inf->desplegar(); // Dibujar la copia inferior
+    inf->desplegar(); // Dibujar la copia inferior
     // glPopMatrix(); // Restaurar el estado de la matriz
 
     // glPushMatrix(); // Guardar el estado de la matriz
-     lat->desplegar(); // Dibujar la copia lateral
+    lat->desplegar(); // Dibujar la copia lateral
     // glPopMatrix(); // Restaurar el estado de la matriz
 
 }
