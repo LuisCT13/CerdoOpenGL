@@ -3,15 +3,20 @@
 #include "cabeza.h"
 #include "torso.h"
 #include "linea.h"
+#include "pata.h"
 
 
 class Cerdo
 {
 public:
     Cerdo();
-    Cerdo(Cabeza*, Torso*);
+    Cerdo(Cabeza*, Torso*, Pata*, Pata*, Pata*, Pata*);
     Cabeza *cabezaCerdo;
     Torso *torsoCerdo;
+    Pata* pataSupIzq;
+    Pata* pataSupDer;
+    Pata* pataInfIzq;
+    Pata* pataInfDer;
     void desplegar();
     void rotar(float,  char);
 };

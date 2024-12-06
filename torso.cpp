@@ -9,8 +9,8 @@ Torso::Torso() {
     Superficie *s;
     s = new Superficie(1,0,0);// X    Y    Z
     s->agregar(new Vertice(0.8, 0.2, 0.5 ));
-    s->agregar(new Vertice(0.8, 0.2, -0.2));
-    s->agregar(new Vertice(0.8, 0.75, -0.2));
+    s->agregar(new Vertice(0.8, 0.2, -0.45));
+    s->agregar(new Vertice(0.8, 0.75, -0.45));
     s->agregar(new Vertice(0.8, 0.75, 0.5));
     agregar(s);
 
@@ -24,32 +24,32 @@ Torso::Torso() {
 
     //parte de atrás
     s = new Superficie(1,0,0);// X    Y    Z
-    s->agregar(new Vertice(0.1, 0.75, -0.2));
-    s->agregar(new Vertice(0.8, 0.75, -0.2));
-    s->agregar(new Vertice(0.8, 0.2, -0.2));
-    s->agregar(new Vertice(0.1, 0.2, -0.2));
+    s->agregar(new Vertice(0.1, 0.75, -0.45));
+    s->agregar(new Vertice(0.8, 0.75, -0.45));
+    s->agregar(new Vertice(0.8, 0.2, -0.45));
+    s->agregar(new Vertice(0.1, 0.2, -0.45));
     agregar(s);
 
     //lado izquierdo
     s = new Superficie(1,0,0);// X    Y    Z
-    s->agregar(new Vertice(0.1, 0.2, -0.2));
+    s->agregar(new Vertice(0.1, 0.2, -0.45));
     s->agregar(new Vertice(0.1, 0.2, 0.5));
     s->agregar(new Vertice(0.1, 0.75, 0.5));
-    s->agregar(new Vertice(0.1, 0.75, -0.2));
+    s->agregar(new Vertice(0.1, 0.75, -0.45));
     agregar(s);
 
     //parte de arriba
     s = new Superficie(1,0,0);// X    Y    Z
     s->agregar(new Vertice(0.1, 0.75, 0.5));
     s->agregar(new Vertice(0.8, 0.75, 0.5));
-    s->agregar(new Vertice(0.8, 0.75, -0.2));
-    s->agregar(new Vertice(0.1, 0.75, -0.2));
+    s->agregar(new Vertice(0.8, 0.75, -0.45));
+    s->agregar(new Vertice(0.1, 0.75, -0.45));
     agregar(s);
 
     //parte de abajo
     s = new Superficie(1,0,0);// X    Y    Z
-    s->agregar(new Vertice(0.1, 0.2, -0.2));
-    s->agregar(new Vertice(0.8, 0.2, -0.2));
+    s->agregar(new Vertice(0.1, 0.2, -0.45));
+    s->agregar(new Vertice(0.8, 0.2, -0.45));
     s->agregar(new Vertice(0.8, 0.2, 0.5));
     s->agregar(new Vertice(0.1, 0.2, 0.5));
     agregar(s);
