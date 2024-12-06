@@ -16,6 +16,9 @@ public:
 
 private:
     Cerdo *cerdito;
+    Cerdo *inf;
+    Cerdo *sup;
+    Cerdo *lat;
     int angulo;
     int anguloX;
     int anguloY;
@@ -32,6 +35,7 @@ private:
     void mousePressEvent(QMouseEvent *);
     void mouseReleaseEvent(QMouseEvent *);
     void rotarenEje(Linea*);
+    void desplegarCopias();
 };
 
 #endif // OPENGLWIDGET_H

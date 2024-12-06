@@ -4,6 +4,7 @@
 #include "torso.h"
 #include "linea.h"
 #include "pata.h"
+#include "matriz3d.h"
 
 
 class Cerdo
@@ -21,6 +22,7 @@ public:
     void rotar(float,  char);
     void trasladar(float, float, float);
     Cerdo *copia();
+    void escalarPiezas(Matriz3D *);
 };
 
 #endif // CERDO_H

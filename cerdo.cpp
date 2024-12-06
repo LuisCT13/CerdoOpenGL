@@ -76,4 +76,13 @@ Cerdo* Cerdo::copia(){
     copia->pataSupIzq=this->pataSupIzq;
     return copia;
 }
+void Cerdo:: escalarPiezas(Matriz3D *M){
+    cabezaCerdo->transformar(M);
+    torsoCerdo->transformar(M);
+    pataSupIzq->transformar(M);
+    pataSupDer->transformar(M);
+    pataInfDer->transformar(M);
+    pataInfIzq->transformar(M);
+
+}
 

@@ -356,6 +356,48 @@ void OpenGLWidget::mouseMoveEvent(QMouseEvent *e) {
     focoY = 1.0f - (2.0f * e->position().y() / alto);
     update();
 }
+void OpenGLWidget::desplegarCopias( ) {
+
+    //Creacion de las copias
+    sup= cerdito->copia();
+    inf= cerdito->copia();
+    lat= cerdito->copia();
+
+    //Declaración de la Matriz de Escalado para Hcaer mas pequeñas las Vistas
+    float factorEscalado = 0.5; // Escala a la mitad del tamaño original
+    Matriz3D* matrizEscalado = new Matriz3D(factorEscalado, 0, 0, 0,
+                                            0, factorEscalado, 0, 0,
+                                            0, 0, factorEscalado, 0);
+    sup->escalarPiezas(matrizEscalado);
+    inf->escalarPiezas(matrizEscalado);
+    lat->escalarPiezas(matrizEscalado);
+
+    //Aplicar las Transformaciones para las vistas
+    //Superior
+    float angSup = 90.0 * M_PI / 180.0; // Convertir a radianes
+    Matriz3D* matrizRotacionSup = new Matriz3D(1, 0, 0, 0,
+                                               0, cos(angSup), -sin(angSup), 0,
+                                               0, sin(angSup), cos(angSup), 0);
+    sup->escalarPiezas(matrizRotacionSup);
+        //Inferior
+    float anguloInf = 90.0 * M_PI / -180.0; // Convertir a radianes
+    Matriz3D* matrizRotacionInf = new Matriz3D(1, 0, 0, 0,
+                                               0, cos(anguloInf), -sin(anguloInf), 0,
+                                               0, sin(anguloInf), cos(anguloInf), 0);
+    inf->escalarPiezas(matrizRotacionInf);
+        //lateral
+    float anguloLat = 90.0 * M_PI / -180.0; // Convertir a radianes
+    Matriz3D* matrizRotacionLateral = new Matriz3D(cos(anguloLat), 0, sin(anguloLat), 0,
+                                                   0, 1, 0, 0,
+                                                   -sin(anguloLat), 0, cos(anguloLat), 0);
+    lat->escalarPiezas(matrizRotacionLateral);
+
+    //Traslación de las Copias
+    sup->trasladar(-0.10, -1, 0);
+    inf->trasladar(-0.5, -1, 0);
+    lat->trasladar(-1, -1, 0);
+
+}
 
 void OpenGLWidget::paintGL( ) {
 
@@ -390,5 +432,8 @@ void OpenGLWidget::paintGL( ) {
     glFrustum(-1.0,1.0,-1.0,1.0,2.0,10.0);
     glMatrixMode(GL_MODELVIEW);
     cerdito->desplegar();
+    inf->desplegar();
+    lat->desplegar();
+    sup->desplegar();
 }
 
