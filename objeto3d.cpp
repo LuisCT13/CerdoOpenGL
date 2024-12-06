@@ -2,9 +2,9 @@
 #include <cmath>
 
 Objeto3D::Objeto3D() {
-    EjeX = new Linea(380,317,255,516,317,255);
-    EjeY = new Linea(450,200,255,450,420,255);
-    EjeZ = new Linea(448,307,90,448,307,390);
+    EjeX = new Linea(0.2,0.5,0.5,0.8,0.5,0.5);
+    EjeY = new Linea(0.5,1,0.5,0.5,0.2,0.5);
+    EjeZ = new Linea(0.5,0.5,1,0.5,0.5,0.2);
 }
 
 Objeto3D::~Objeto3D() {
@@ -35,6 +35,9 @@ void Objeto3D::transformar(Matriz3D* M) {
     for (Superficie* superficie:superficies) {
         superficie->transformar(M);
     }
+    this->EjeX->transformar(M);
+    this->EjeY->transformar(M);
+    this->EjeZ->transformar(M);
 }
 
 

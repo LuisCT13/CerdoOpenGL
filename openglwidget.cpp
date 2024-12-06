@@ -323,21 +323,15 @@ void OpenGLWidget::initializeGL() {
 
 void OpenGLWidget::timerEvent(QTimerEvent *) {
     if(opcionesdeRotacion=='x'){
-        //glRotated(angulo, 1, 0, 0);//rota la figura al rededor del eje x en el angulo dado
-        cerdito->rotar((angulo/3.14)/18000, 'x');
+     cerdito->rotar((angulo/3.14)/180, 'x');
 
     }
     else if(opcionesdeRotacion=='y'){
-        //glRotated(angulo, 0, 1, 0);//rota la figura al rededor del eje y en el angulo dado
-        cerdito->rotar((angulo/3.14)/18000, 'y');
-
+    cerdito->rotar((angulo/3.14)/180, 'y');
     }
     else if(opcionesdeRotacion=='z'){
-        //glRotated(angulo, 0, 0, 1);//rota la figura al rededor del eje z en el angulo dado
-        cerdito->rotar((angulo/3.14)/18000, 'z');
+        cerdito->rotar((angulo/3.14)/180, 'z');
     }
-
-    //angulo+=sentido;
     update();
 }
 
@@ -356,13 +350,10 @@ void OpenGLWidget::mouseReleaseEvent(QMouseEvent *){
 }
 
 void OpenGLWidget::mouseMoveEvent(QMouseEvent *e) {
-
     int ancho = width();
     int alto = height();
-
     focoX = (2.0f * e->position().x() / ancho) - 1.0f;
     focoY = 1.0f - (2.0f * e->position().y() / alto);
-
     update();
 }
 
@@ -392,14 +383,12 @@ void OpenGLWidget::paintGL( ) {
 
     //Rotacion de la figura
     glTranslatef(0.25, 0.25, -3.5);
-
     glTranslatef(-0.25, -0.25, 0.25);
 
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
     glFrustum(-1.0,1.0,-1.0,1.0,2.0,10.0);
     glMatrixMode(GL_MODELVIEW);
-
     cerdito->desplegar();
 }
 

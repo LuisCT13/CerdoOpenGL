@@ -1369,7 +1369,10 @@ debug/mainwindow.o: ../../mainwindow.cpp ../../mainwindow.h \
 		../../superficie.h \
 		../../vertice.h \
 		../../matriz3d.h \
-		../../linea.h
+		../../linea.h \
+		../../cerdo.h \
+		../../cabeza.h \
+		../../torso.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\mainwindow.o ..\..\mainwindow.cpp
 
 debug/matriz3d.o: ../../matriz3d.cpp ../../matriz3d.h
@@ -1781,9 +1784,9 @@ debug/openglwidget.o: ../../openglwidget.cpp ../../openglwidget.h \
 		../../vertice.h \
 		../../matriz3d.h \
 		../../linea.h \
+		../../cerdo.h \
 		../../cabeza.h \
-		../../torso.h \
-		../../cerdo.h
+		../../torso.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\openglwidget.o ..\..\openglwidget.cpp
 
 debug/superficie.o: ../../superficie.cpp ../../superficie.h \

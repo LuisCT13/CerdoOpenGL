@@ -1369,7 +1369,10 @@ release/mainwindow.o: ../../mainwindow.cpp ../../mainwindow.h \
 		../../superficie.h \
 		../../vertice.h \
 		../../matriz3d.h \
-		../../linea.h
+		../../linea.h \
+		../../cerdo.h \
+		../../cabeza.h \
+		../../torso.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\mainwindow.o ..\..\mainwindow.cpp
 
 release/matriz3d.o: ../../matriz3d.cpp ../../matriz3d.h
@@ -1781,9 +1784,9 @@ release/openglwidget.o: ../../openglwidget.cpp ../../openglwidget.h \
 		../../vertice.h \
 		../../matriz3d.h \
 		../../linea.h \
+		../../cerdo.h \
 		../../cabeza.h \
-		../../torso.h \
-		../../cerdo.h
+		../../torso.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\openglwidget.o ..\..\openglwidget.cpp
 
 release/superficie.o: ../../superficie.cpp ../../superficie.h \
