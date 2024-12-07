@@ -1356,12 +1356,28 @@ debug/mainwindow.o: ../mainwindow.cpp ../mainwindow.h \
 		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtGui/qguiapplication_platform.h \
 		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtWidgets/qtabwidget.h \
 		ui_mainwindow.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtCore/QVariant \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtWidgets/QApplication \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtWidgets/qapplication.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtWidgets/QGridLayout \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtWidgets/qgridlayout.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtWidgets/qlayout.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtWidgets/qlayoutitem.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtWidgets/qboxlayout.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtWidgets/QMenuBar \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtWidgets/qmenubar.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtWidgets/qmenu.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtWidgets/QPushButton \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtWidgets/qpushbutton.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtWidgets/qabstractbutton.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtWidgets/QStatusBar \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtWidgets/qstatusbar.h \
+		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtWidgets/QWidget \
 		../openglwidget.h \
 		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtOpenGLWidgets/QOpenGLWidget \
 		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtOpenGLWidgets/qopenglwidget.h \
 		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtOpenGLWidgets/qtopenglwidgetsglobal.h \
 		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtOpenGLWidgets/qtopenglwidgetsexports.h \
-		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtWidgets/QWidget \
 		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtGui/QSurfaceFormat \
 		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtGui/qsurfaceformat.h \
 		D:/DESCARGAS/QT-C++/6.7.2/mingw_64/include/QtGui/qopengl.h \

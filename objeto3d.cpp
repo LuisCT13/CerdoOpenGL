@@ -90,6 +90,11 @@ void Objeto3D::trasladar(float x, float y, float z){
     for(Superficie* superficie:this->superficies){
         superficie->trasladar(x, y, z);
     }
+    EjeX->trasladar(x, y, z);
+    EjeY->trasladar(x, y, z);
+    EjeZ->trasladar(x, y, z);
+
+
 }
 
 

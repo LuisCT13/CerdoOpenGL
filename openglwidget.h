@@ -17,8 +17,8 @@ public:
 private:
     int cont;
     Cerdo *cerdito;
-    Cerdo *inf;
     Cerdo *sup;
+    Cerdo *inf;
     Cerdo *lat;
     int angulo;
     int anguloX;

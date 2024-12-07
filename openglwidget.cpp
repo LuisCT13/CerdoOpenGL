@@ -15,31 +15,42 @@ OpenGLWidget::OpenGLWidget() {
     setMouseTracking(true);
     this->opcionesdeRotacion='x';
     cerdito = new Cerdo();
+    inf = new Cerdo();
+    sup = new Cerdo();
+    lat = new Cerdo();
+    desplegarCopias();
 
-     sup = cerdito->copia();
-     inf = cerdito->copia();
-     lat = cerdito->copia();
 }
 
 void OpenGLWidget::initializeGL() {
     glClearColor(1,1,1,0);
-    //desplegarCopias();
-    // update();
+   // desplegarCopias();
+    update();
 }
 
 void OpenGLWidget::timerEvent(QTimerEvent *) {
 
     if(opcionesdeRotacion=='x'){
      cerdito->rotar((angulo/3.14)/180, 'x');
+     sup->rotar((angulo/3.14)/180, 'x');
+     inf->rotar((angulo/3.14)/180, 'x');
+     lat->rotar((angulo/3.14)/180, 'x');
+
+
     }
     else if(opcionesdeRotacion=='y'){
     cerdito->rotar((angulo/3.14)/180, 'y');
+        sup->rotar((angulo/3.14)/180, 'y');
+        inf->rotar((angulo/3.14)/180, 'y');
+        lat->rotar((angulo/3.14)/180, 'y');
     }
     else if(opcionesdeRotacion=='z'){
     cerdito->rotar((angulo/3.14)/180, 'z');
+        sup->rotar((angulo/3.14)/180, 'z');
+        inf->rotar((angulo/3.14)/180, 'z');
+        lat->rotar((angulo/3.14)/180, 'z');
     }
 
-    desplegarCopias();
     update();
 }
 
@@ -52,6 +63,7 @@ void OpenGLWidget::mousePressEvent(QMouseEvent *e){
     else if(e->button()==Qt::LeftButton){
         sentido = -1;
     }
+    //desplegarCopias();
     update();
 }
 void OpenGLWidget::mouseReleaseEvent(QMouseEvent *){
@@ -67,14 +79,14 @@ void OpenGLWidget::mouseMoveEvent(QMouseEvent *e) {
 }
 void OpenGLWidget::desplegarCopias() {
     // Eliminar las copias previas para evitar fugas de memoria
-    delete sup;
-    delete inf;
-    delete lat;
+    // delete sup;
+    // delete inf;
+    // delete lat;
 
     // Crear nuevas copias basadas en el estado actual del cerdito
-    sup = cerdito->copia();
-    inf = cerdito->copia();
-    lat = cerdito->copia();
+    // sup = cerdito->copia();
+    // inf = cerdito->copia();
+    // lat = cerdito->copia();
 
     // Declaración de la matriz de escalado para hacer más pequeñas las vistas
     float factorEscalado = 0.4; // Escala al 40% del tamaño original
@@ -119,6 +131,7 @@ void OpenGLWidget::desplegarCopias() {
     delete matrizRotacionSup;
     delete matrizRotacionInf;
     delete matrizRotacionLat;
+
 }
 
 
@@ -179,5 +192,6 @@ void OpenGLWidget::paintGL() {
         lat->desplegar();
         glPopMatrix();
     }
+    update();
 }
 

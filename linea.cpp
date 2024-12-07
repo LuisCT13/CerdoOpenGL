@@ -52,6 +52,12 @@ void Linea::transformar(Matriz3D* matriz)
     p1->transformar(matriz);
     p2->transformar(matriz);
 }
+void Linea::trasladar(float x, float y, float z)
+{
+    p1->trasladar(x, y ,z);
+    p2->trasladar(x, y ,z);
+
+}
 
 
 

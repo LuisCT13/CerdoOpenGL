@@ -16,6 +16,7 @@ public:
     void desplegar();
     Linea *copia();
     void transformar(Matriz3D*);
+    void trasladar(float, float, float);
 };
 
 #endif // LINEA_H
