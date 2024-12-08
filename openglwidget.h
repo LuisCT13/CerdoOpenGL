@@ -13,6 +13,8 @@ class OpenGLWidget : public QOpenGLWidget
 public:
     OpenGLWidget();
     char opcionesdeRotacion;
+    QBasicTimer timer;
+
 
 private:
     int cont;
@@ -24,7 +26,6 @@ private:
     int anguloX;
     int anguloY;
     int anguloZ;
-    QBasicTimer timer;
     int sentido;
     float focoX;
     float focoY;

@@ -24,7 +24,6 @@ OpenGLWidget::OpenGLWidget() {
 
 void OpenGLWidget::initializeGL() {
     glClearColor(1,1,1,0);
-   // desplegarCopias();
     update();
 }
 
@@ -56,14 +55,13 @@ void OpenGLWidget::timerEvent(QTimerEvent *) {
 
 void OpenGLWidget::mousePressEvent(QMouseEvent *e){
 
-    timer.start(50, this);
+    //timer.start(50, this);
     if(e->button() == Qt::RightButton){
         sentido = 1;
     }
     else if(e->button()==Qt::LeftButton){
         sentido = -1;
     }
-    //desplegarCopias();
     update();
 }
 void OpenGLWidget::mouseReleaseEvent(QMouseEvent *){
@@ -144,7 +142,7 @@ void OpenGLWidget::paintGL() {
     glEnable(GL_COLOR_MATERIAL);
     glLoadIdentity();
 
-    // Configura la luz con las coordenadas dinámicas
+    // Configura la luz con las coordenadas del mouse
     float luzAmbiente[] = {0.2, 0.2, 0.2, 1};
     float luzDifusa[] = {1.0, 1.0, 1.0, 1};
     float luzPosicion[] = {focoX, focoY, 2.0f, 1};
