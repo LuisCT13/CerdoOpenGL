@@ -29,6 +29,9 @@ public:
     QPushButton *rotarenX;
     QPushButton *rotarenY;
     QPushButton *rotarenZ;
+    QPushButton *selTodo;
+    QPushButton *selPatas;
+    QPushButton *selCabeza;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -54,10 +57,19 @@ public:
         rotarenZ = new QPushButton(centralwidget);
         rotarenZ->setObjectName("rotarenZ");
         rotarenZ->setGeometry(QRect(880, 100, 80, 24));
+        selTodo = new QPushButton(centralwidget);
+        selTodo->setObjectName("selTodo");
+        selTodo->setGeometry(QRect(880, 600, 86, 29));
+        selPatas = new QPushButton(centralwidget);
+        selPatas->setObjectName("selPatas");
+        selPatas->setGeometry(QRect(880, 680, 86, 29));
+        selCabeza = new QPushButton(centralwidget);
+        selCabeza->setObjectName("selCabeza");
+        selCabeza->setGeometry(QRect(880, 640, 86, 29));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 1000, 21));
+        menubar->setGeometry(QRect(0, 0, 1000, 25));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName("statusbar");
@@ -74,6 +86,9 @@ public:
         rotarenX->setText(QCoreApplication::translate("MainWindow", "Rotar en X", nullptr));
         rotarenY->setText(QCoreApplication::translate("MainWindow", "Rotar en Y", nullptr));
         rotarenZ->setText(QCoreApplication::translate("MainWindow", "Rotar en Z", nullptr));
+        selTodo->setText(QCoreApplication::translate("MainWindow", "Cerdo", nullptr));
+        selPatas->setText(QCoreApplication::translate("MainWindow", "Patas", nullptr));
+        selCabeza->setText(QCoreApplication::translate("MainWindow", "Cabeza", nullptr));
     } // retranslateUi
 
 };

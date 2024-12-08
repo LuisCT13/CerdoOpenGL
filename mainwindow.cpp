@@ -12,6 +12,9 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     openGLWidget=new OpenGLWidget();
     ui->LayoutOpenGL->addWidget(openGLWidget);
+    connect(ui->selTodo, &QPushButton::clicked, this, &MainWindow::on_selTodo_clicked);
+    connect(ui->selCabeza, &QPushButton::clicked, this, &MainWindow::on_selCabeza_clicked);
+    connect(ui->selPatas, &QPushButton::clicked, this, &MainWindow::on_selPatas_clicked);
 }
 
 MainWindow::~MainWindow()
@@ -21,7 +24,7 @@ MainWindow::~MainWindow()
 void MainWindow::on_rotarenX_clicked()
 {
     if (openGLWidget->opcionesdeRotacion == 'x') {
-        openGLWidget->opcionesdeRotacion = ' '; // Desactivar la rotación si se presiona el mismo botón
+        openGLWidget->opcionesdeRotacion = ' '; // Desactivar la rotación
         openGLWidget->timer.stop();
     } else {
         openGLWidget->opcionesdeRotacion = 'x';
@@ -31,7 +34,7 @@ void MainWindow::on_rotarenX_clicked()
 void MainWindow::on_rotarenY_clicked()
 {
     if (openGLWidget->opcionesdeRotacion == 'y') {
-        openGLWidget->opcionesdeRotacion = ' '; // Desactivar la rotación si se presiona el mismo botón
+        openGLWidget->opcionesdeRotacion = ' ';
         openGLWidget->timer.stop();
     } else {
         openGLWidget->opcionesdeRotacion = 'y';
@@ -41,10 +44,25 @@ void MainWindow::on_rotarenY_clicked()
 void MainWindow::on_rotarenZ_clicked()
 {
     if (openGLWidget->opcionesdeRotacion == 'z') {
-        openGLWidget->opcionesdeRotacion = ' '; // Desactivar la rotación si se presiona el mismo botón
+        openGLWidget->opcionesdeRotacion = ' ';
         openGLWidget->timer.stop();
     } else {
         openGLWidget->opcionesdeRotacion = 'z';
         openGLWidget->timer.start(50, openGLWidget);
     }
+}
+
+void MainWindow::on_selTodo_clicked(){
+
+    openGLWidget->estado = 1;
+}
+
+void MainWindow::on_selCabeza_clicked(){
+
+    openGLWidget->estado = 2;
+}
+
+void MainWindow::on_selPatas_clicked(){
+
+    openGLWidget->estado = 3;
 }

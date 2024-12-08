@@ -56,12 +56,13 @@ void OpenGLWidget::timerEvent(QTimerEvent *) {
 void OpenGLWidget::mousePressEvent(QMouseEvent *e){
 
     //timer.start(50, this);
-    if(e->button() == Qt::RightButton){
+    /*if(e->button() == Qt::RightButton){
         sentido = 1;
     }
     else if(e->button()==Qt::LeftButton){
         sentido = -1;
-    }
+    }*/
+
     update();
 }
 void OpenGLWidget::mouseReleaseEvent(QMouseEvent *){
@@ -73,20 +74,29 @@ void OpenGLWidget::mouseMoveEvent(QMouseEvent *e) {
     int alto = height();
     focoX = (2.0f * e->position().x() / ancho) - 1.0f;
     focoY = 1.0f - (2.0f * e->position().y() / alto);
+    if (estado != 0){
+        int dx = e->pos().x() - lastPos.x();
+        int dy = e->pos().y() - lastPos.y();
+        if(e->button() == Qt::LeftButton){
+            switch(estado)
+            {
+            case 1:
+                cerdito->rotar(anguloX, 'x');
+                cerdito->rotar(anguloY, 'y');
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            }
+        }
+    }
+    lastPos = e->pos();
     update();
 }
 void OpenGLWidget::desplegarCopias() {
-    // Eliminar las copias previas para evitar fugas de memoria
-    // delete sup;
-    // delete inf;
-    // delete lat;
 
-    // Crear nuevas copias basadas en el estado actual del cerdito
-    // sup = cerdito->copia();
-    // inf = cerdito->copia();
-    // lat = cerdito->copia();
-
-    // Declaración de la matriz de escalado para hacer más pequeñas las vistas
+    // Matriz de escalado para hacer más pequeñas las vistas
     float factorEscalado = 0.4; // Escala al 40% del tamaño original
     Matriz3D* matrizEscalado = new Matriz3D(factorEscalado, 0, 0, 0,
                                             0, factorEscalado, 0, 0,
@@ -97,7 +107,7 @@ void OpenGLWidget::desplegarCopias() {
     inf->escalarPiezas(matrizEscalado);
     lat->escalarPiezas(matrizEscalado);
 
-    // Aplicar transformaciones específicas para cada copia
+    // Aplicar transformaciones para cada copia
     // Superior
     float angSup = 90.0 * M_PI / 180.0; // Convertir a radianes
     Matriz3D* matrizRotacionSup = new Matriz3D(1, 0, 0, 0,

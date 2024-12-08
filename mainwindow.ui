@@ -64,6 +64,45 @@
      <string>Rotar en Z</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="selTodo">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>600</y>
+      <width>86</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Cerdo</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="selPatas">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>680</y>
+      <width>86</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Patas</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="selCabeza">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>640</y>
+      <width>86</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Cabeza</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -71,7 +110,7 @@
      <x>0</x>
      <y>0</y>
      <width>1000</width>
-     <height>21</height>
+     <height>25</height>
     </rect>
    </property>
   </widget>

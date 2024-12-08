@@ -14,6 +14,7 @@ public:
     OpenGLWidget();
     char opcionesdeRotacion;
     QBasicTimer timer;
+    int estado = 0;
 
 
 private:
@@ -38,6 +39,7 @@ private:
     void mouseReleaseEvent(QMouseEvent *);
     void rotarenEje(Linea*);
     void desplegarCopias();
+    QPoint lastPos;
 };
 
 #endif // OPENGLWIDGET_H
