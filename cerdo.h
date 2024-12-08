@@ -24,6 +24,10 @@ public:
     void trasladar(float, float, float);
     Cerdo *copia();
     void escalarPiezas(Matriz3D *);
+    void mover(float, float, float);
+    void moverCabeza(float, char);
+    void moverPatas(float, char);
+
 };
 
 #endif // CERDO_H

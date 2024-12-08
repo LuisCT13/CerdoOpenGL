@@ -7,6 +7,9 @@ class Torso: public Objeto3D
 public:
     Torso();
     Torso* copia();
+    /*Linea *EjeX;
+    Linea *EjeY;
+    Linea *EjeZ;*/
 };
 
 #endif // TORSO_H

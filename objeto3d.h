@@ -16,6 +16,7 @@ public:
     void rotar(float,Linea*);
     void transformar(Matriz3D*);
     void trasladar(float, float, float);
+    void mover(float, float, float);
     Linea *EjeX;
     Linea *EjeY;
     Linea *EjeZ;

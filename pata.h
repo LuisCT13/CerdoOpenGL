@@ -10,6 +10,9 @@ public:
     float x1, x2, y1, y2, z1, z2;
     void moverPatas(float, float);
     Pata* copia();
+    /*Linea *EjeX;
+    Linea *EjeY;
+    Linea *EjeZ;*/
 };
 
 #endif // PATA_H

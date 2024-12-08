@@ -3,6 +3,10 @@
 #include "torso.h"
 #include "cerdo.h"
 
+int lastMouseX = 0;
+int lastMouseY = 0;
+
+
 OpenGLWidget::OpenGLWidget() {
 
     anguloX=15;
@@ -74,26 +78,51 @@ void OpenGLWidget::mouseMoveEvent(QMouseEvent *e) {
     int alto = height();
     focoX = (2.0f * e->position().x() / ancho) - 1.0f;
     focoY = 1.0f - (2.0f * e->position().y() / alto);
-    if (estado != 0){
-        int dx = e->pos().x() - lastPos.x();
-        int dy = e->pos().y() - lastPos.y();
-        if(e->button() == Qt::LeftButton){
-            switch(estado)
-            {
-            case 1:
-                cerdito->rotar(anguloX, 'x');
-                cerdito->rotar(anguloY, 'y');
-                break;
-            case 2:
-                break;
-            case 3:
-                break;
-            }
-        }
+
+    int dx = e->x() - lastMouseX;
+    int dy = e->y() - lastMouseY;
+
+    // Ajusta la sensibilidad de la rotación según sea necesario
+    float anguloX = dy / 100.0f;
+    float anguloY = -dx / 100.0f;
+
+
+    if (e->buttons() & Qt::LeftButton && estado == 1) {
+        cerdito->rotar(anguloX, 'x');
+        cerdito->rotar(anguloY, 'y');
+        sup->rotar(anguloX, 'x');
+        sup->rotar(anguloY, 'y');
+        inf->rotar(anguloX, 'x');
+        inf->rotar(anguloY, 'y');
+        lat->rotar(anguloX, 'x');
+        lat->rotar(anguloY, 'y');
+
+    } else if (e->buttons() & Qt::LeftButton && estado == 2){
+        cerdito->moverCabeza(anguloX, 'x');
+        cerdito->moverCabeza(anguloY, 'y');
+        sup->moverCabeza(anguloX, 'x');
+        sup->moverCabeza(anguloY, 'y');
+        inf->moverCabeza(anguloX, 'x');
+        inf->moverCabeza(anguloY, 'y');
+        lat->moverCabeza(anguloX, 'x');
+        lat->moverCabeza(anguloY, 'y');
+
+    } else if (e->buttons() & Qt::LeftButton && estado == 3){
+        cerdito->moverPatas(anguloX, 'x');
+        cerdito->moverPatas(anguloY, 'z');
+        sup->moverPatas(anguloX, 'x');
+        sup->moverPatas(anguloY, 'z');
+        inf->moverPatas(anguloX, 'x');
+        inf->moverPatas(anguloY, 'z');
+        lat->moverPatas(anguloX, 'x');
+        lat->moverPatas(anguloY, 'z');
+
     }
-    lastPos = e->pos();
+    lastMouseX = e->x();
+    lastMouseY = e->y();
     update();
 }
+
 void OpenGLWidget::desplegarCopias() {
 
     // Matriz de escalado para hacer más pequeñas las vistas

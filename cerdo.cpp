@@ -86,3 +86,35 @@ void Cerdo:: escalarPiezas(Matriz3D *M){
 
 }
 
+void Cerdo::mover(float dx, float dy, float dz) {
+    cabezaCerdo->mover(dx, dy, dz);
+    torsoCerdo->mover(dx, dy, dz);
+    pataSupIzq->mover(dx, dy, dz);
+    pataSupDer->mover(dx, dy, dz);
+    pataInfDer->mover(dx, dy, dz);
+    pataInfIzq->mover(dx, dy, dz);
+}
+
+void Cerdo::moverPatas(float angulo, char opcion){
+    if(opcion=='x')
+    {
+        pataSupDer->rotar(angulo, cabezaCerdo->EjeX);
+        pataInfDer->rotar(angulo, cabezaCerdo->EjeX);
+        pataSupIzq->rotar(angulo, cabezaCerdo->EjeX);
+        pataInfIzq->rotar(angulo, cabezaCerdo->EjeX);
+    }
+
+    if(opcion=='z'){
+        pataSupDer->rotar(angulo, cabezaCerdo->EjeZ);
+        pataInfDer->rotar(angulo, cabezaCerdo->EjeZ);
+        pataSupIzq->rotar(angulo, cabezaCerdo->EjeZ);
+        pataInfIzq->rotar(angulo, cabezaCerdo->EjeZ);
+    }
+}
+
+void Cerdo::moverCabeza(float angulo, char opcion) {
+    if(opcion=='x')
+        cabezaCerdo->rotar(angulo, cabezaCerdo->EjeX);
+    if(opcion=='y')
+        cabezaCerdo->rotar(angulo, cabezaCerdo->EjeY);
+}

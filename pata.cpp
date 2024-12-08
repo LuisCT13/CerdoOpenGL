@@ -15,6 +15,17 @@ Pata::Pata(float x1, float x2,
     this->z1 = z1;
     this->z2 = z2;
 
+    /*float centroX = (x1 + x2) / 2;
+    float centroY = y2;
+    float centroZ = (z1 + z2) / 2;
+
+    // Definir la longitud de los ejes (ajusta el valor según sea necesario)
+    float longitudEje = 0.5f;
+
+    this->EjeX = new Linea(centroX - longitudEje, centroY, centroZ, centroX + longitudEje, centroY, centroZ);
+    this->EjeY = new Linea(centroX, centroY + longitudEje, centroZ, centroX, centroY - longitudEje, centroZ);
+    this->EjeZ = new Linea(centroX, centroY, centroZ + longitudEje, centroX, centroY, centroZ - longitudEje);*/
+
     Superficie* s;
 
     //parte de ARRIBA

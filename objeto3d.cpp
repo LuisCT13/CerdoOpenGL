@@ -35,6 +35,14 @@ Objeto3D* Objeto3D::copia() {
 
 }
 
+void Objeto3D::mover(float dx, float dy, float dz) {
+    Matriz3D* T = new Matriz3D(1, 0, 0, dx,
+                               0, 1, 0, dy,
+                               0, 0, 1, dz);
+    transformar(T);
+    delete T;
+}
+
 void Objeto3D::transformar(Matriz3D* M) {
     for (Superficie* superficie:superficies) {
         superficie->transformar(M);
