@@ -98,17 +98,17 @@ void Cerdo::mover(float dx, float dy, float dz) {
 void Cerdo::moverPatas(float angulo, char opcion){
     if(opcion=='x')
     {
-        pataSupDer->rotar(angulo, cabezaCerdo->EjeX);
-        pataInfDer->rotar(angulo, cabezaCerdo->EjeX);
-        pataSupIzq->rotar(angulo, cabezaCerdo->EjeX);
-        pataInfIzq->rotar(angulo, cabezaCerdo->EjeX);
+        pataSupDer->rotar(angulo, pataSupDer->EjePX);
+        pataInfDer->rotar(angulo, pataInfDer->EjePX);
+        pataSupIzq->rotar(angulo, pataSupIzq->EjePX);
+        pataInfIzq->rotar(angulo, pataInfIzq->EjePX);
     }
 
     if(opcion=='z'){
-        pataSupDer->rotar(angulo, cabezaCerdo->EjeZ);
-        pataInfDer->rotar(angulo, cabezaCerdo->EjeZ);
-        pataSupIzq->rotar(angulo, cabezaCerdo->EjeZ);
-        pataInfIzq->rotar(angulo, cabezaCerdo->EjeZ);
+        pataSupDer->rotar(angulo, pataSupDer->EjePZ);
+        pataInfDer->rotar(angulo, pataInfDer->EjePZ);
+        pataSupIzq->rotar(angulo, pataSupIzq->EjePZ);
+        pataInfIzq->rotar(angulo, pataInfIzq->EjePZ);
     }
 }
 
