@@ -26,55 +26,8 @@ Pata::Pata(float x1, float x2,
     this->EjePY = new Linea(centroX, centroY + longitudEje, centroZ, centroX, centroY - longitudEje, centroZ);
     this->EjePZ = new Linea(centroX, centroY, centroZ + longitudEje, centroX, centroY, centroZ - longitudEje);
 
-    Superficie* s;
-
-    //parte de ARRIBA
-    s = new Superficie(1,0,0);// X    Y    Z
-    s->agregar(new Vertice(x2, y1, z2));
-    s->agregar(new Vertice(x2, y1, z1));
-    s->agregar(new Vertice(x2, y2, z1));
-    s->agregar(new Vertice(x2, y2, z2));
-    agregar(s);
-
-    //parte de enfrente
-    s = new Superficie(1,0,0);// X    Y    Z
-    s->agregar(new Vertice(x1, y1, z2));
-    s->agregar(new Vertice(x2, y1, z2));
-    s->agregar(new Vertice(x2, y2, z2));
-    s->agregar(new Vertice(x1, y2, z2));
-    agregar(s);
-
-    //parte de atrás
-    s = new Superficie(1,0,0);// X    Y    Z
-    s->agregar(new Vertice(x1, y2, z1));
-    s->agregar(new Vertice(x2, y2, z1));
-    s->agregar(new Vertice(x2, y1, z1));
-    s->agregar(new Vertice(x1, y1, z1));
-    agregar(s);
-
-    //lado izquierdo
-    s = new Superficie(1,0,0);// X    Y    Z
-    s->agregar(new Vertice(x1, y1, z1));
-    s->agregar(new Vertice(x1, y1, z2));
-    s->agregar(new Vertice(x1, y2, z2));
-    s->agregar(new Vertice(x1, y2, z1));
-    agregar(s);
-
-    //parte de arriba
-    s = new Superficie(1,0,0);// X    Y    Z
-    s->agregar(new Vertice(x1, y2, z2));
-    s->agregar(new Vertice(x2, y2, z2));
-    s->agregar(new Vertice(x2, y2, z1));
-    s->agregar(new Vertice(x1, y2, z1));
-    agregar(s);
-
-    //parte de abajo
-    s = new Superficie(1,0,0);// X    Y    Z
-    s->agregar(new Vertice(x1, y1, z1));
-    s->agregar(new Vertice(x2, y1, z1));
-    s->agregar(new Vertice(x2, y1, z2));
-    s->agregar(new Vertice(x1, y1, z2));
-    agregar(s);
+    Superficie* s=new Superficie(1,0,0);
+    agregarFigura(s, x1, x2, y1, y2, z1, z2);
 
 
 }

@@ -21,9 +21,10 @@ Torso::Torso() {
     //En X 0.1 y termina en 1
     // EN Y en 0.75 y termina en 0.2
     //lado derecho
-    Superficie *s;
-    s = new Superficie(1,0,0);// X    Y    Z
-    s->agregar(new Vertice(0.8, 0.2, 0.5 ));
+    Superficie *s = new Superficie(1,0,0);// X    Y    Z
+    agregarFigura(s, 0.1, 0.8, 0.2, 0.75, -0.45, 0.5);
+
+    /*s->agregar(new Vertice(0.8, 0.2, 0.5 ));
     s->agregar(new Vertice(0.8, 0.2, -0.45));
     s->agregar(new Vertice(0.8, 0.75, -0.45));
     s->agregar(new Vertice(0.8, 0.75, 0.5));
@@ -67,7 +68,7 @@ Torso::Torso() {
     s->agregar(new Vertice(0.8, 0.2, -0.45));
     s->agregar(new Vertice(0.8, 0.2, 0.5));
     s->agregar(new Vertice(0.1, 0.2, 0.5));
-    agregar(s);
+    agregar(s);*/
 }
 
 Torso* Torso::copia() {

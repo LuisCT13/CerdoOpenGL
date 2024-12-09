@@ -17,6 +17,7 @@ public:
     void transformar(Matriz3D*);
     void trasladar(float, float, float);
     void mover(float, float, float);
+    void agregarFigura(Superficie*, float, float, float, float, float, float);
     Linea *EjeX;
     Linea *EjeY;
     Linea *EjeZ;
