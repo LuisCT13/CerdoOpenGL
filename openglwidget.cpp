@@ -59,15 +59,6 @@ void OpenGLWidget::timerEvent(QTimerEvent *) {
 
 void OpenGLWidget::mousePressEvent(QMouseEvent *e){
 
-    //timer.start(50, this);
-    /*if(e->button() == Qt::RightButton){
-        sentido = 1;
-    }
-    else if(e->button()==Qt::LeftButton){
-        sentido = -1;
-    }*/
-
-    update();
 }
 void OpenGLWidget::mouseReleaseEvent(QMouseEvent *){
     timer.stop();

@@ -7,10 +7,10 @@
 Cerdo::Cerdo() {
     cabezaCerdo= new Cabeza();
     torsoCerdo= new Torso();
-    pataSupIzq = new Pata(0.1, 0.3, -0.35, 0.2, 0.3, 0.5);
-    pataSupDer = new Pata(0.6, 0.8, -0.35, 0.2, 0.3, 0.5);
-    pataInfIzq = new Pata(0.1, 0.3, -0.35, 0.2, -0.45, -0.25);
-    pataInfDer = new Pata(0.6, 0.8, -0.35, 0.2, -0.45, -0.25);
+    pataSupIzq = new Pata(0.1, 0.3, -0.35, 0.3, 0.3, 0.5);
+    pataSupDer = new Pata(0.6, 0.8, -0.35, 0.3, 0.3, 0.5);
+    pataInfIzq = new Pata(0.1, 0.3, -0.35, 0.3, -0.45, -0.25);
+    pataInfDer = new Pata(0.6, 0.8, -0.35, 0.3, -0.45, -0.25);
 
 }
 Cerdo::Cerdo(Cabeza* cab, Torso *tor, Pata* supIzq, Pata* supDer, Pata* infDer, Pata* infIzq) {

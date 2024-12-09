@@ -14,6 +14,10 @@ Cabeza::Cabeza(){
     // la x menor va a ser de 0.2 a 0.7
     agregarFigura(s, 0.2, 0.7, 0.5, 1.0, 0.5, 0.9);
 
+    // ---- OJOS DEL CERDO ----
+    agregarFigura(s, 0.2, 0.7, 0.5, 1.0, 0.5, 0.9);
+
+
 }
 
 Cabeza* Cabeza::copia(){
