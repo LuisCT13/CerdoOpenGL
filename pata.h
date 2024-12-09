@@ -1,6 +1,7 @@
 #ifndef PATA_H
 #define PATA_H
 #include "objeto3d.h"
+#include "matriz3d.h"
 
 class Pata : public Objeto3D {
 public:
@@ -14,6 +15,8 @@ public:
     Linea *EjePY;
     Linea *EjePZ;
     float centroX, centroY, centroZ;
+    void trasladarEjesPata(float, float, float);
+    void transformarEjesPata(Matriz3D*);
 };
 
 #endif // PATA_H

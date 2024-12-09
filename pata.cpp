@@ -23,7 +23,7 @@ Pata::Pata(float x1, float x2,
     float longitudEje = 0.5f;
 
     this->EjePX = new Linea(centroX - longitudEje, centroY, centroZ, centroX + longitudEje, centroY, centroZ);
-    //this->EjePY = new Linea(centroX, centroY + longitudEje, centroZ, centroX, centroY - longitudEje, centroZ);
+    this->EjePY = new Linea(centroX, centroY + longitudEje, centroZ, centroX, centroY - longitudEje, centroZ);
     this->EjePZ = new Linea(centroX, centroY, centroZ + longitudEje, centroX, centroY, centroZ - longitudEje);
 
     Superficie* s;
@@ -106,4 +106,16 @@ Pata* Pata::copia() {
     copia->EjeZ = this->EjeZ->copia();
 
     return copia;
+}
+void Pata:: trasladarEjesPata(float x, float y, float z){
+    EjePX->trasladar(x,y,z);
+    EjePY->trasladar(x,y,z);
+    EjePZ->trasladar(x,y,z);
+
+}
+
+void Pata:: transformarEjesPata(Matriz3D *m){
+    EjePX->transformar(m);
+    EjePY->transformar(m);
+    EjePZ->transformar(m);
 }

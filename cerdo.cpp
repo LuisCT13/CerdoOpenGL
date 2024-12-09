@@ -64,6 +64,11 @@ void Cerdo::trasladar(float x, float y, float z){
     pataInfIzq->trasladar(x,y,z);
     pataSupDer->trasladar(x,y,z);
     pataSupIzq->trasladar(x,y,z);
+    //trasladar ejes de las patas
+    pataInfDer->trasladarEjesPata(x,y,z);
+    pataInfIzq->trasladarEjesPata(x,y,z);
+    pataSupDer->trasladarEjesPata(x,y,z);
+    pataSupIzq->trasladarEjesPata(x,y,z);
 }
 Cerdo* Cerdo::copia(){
     // Crear las copias de todas las partes del cerdo
@@ -83,6 +88,11 @@ void Cerdo:: escalarPiezas(Matriz3D *M){
     pataSupDer->transformar(M);
     pataInfDer->transformar(M);
     pataInfIzq->transformar(M);
+    //escalar los ejes de las patas
+    pataSupIzq->transformarEjesPata(M);
+    pataSupDer->transformarEjesPata(M);
+    pataInfDer->transformarEjesPata(M);
+    pataInfIzq->transformarEjesPata(M);
 
 }
 
